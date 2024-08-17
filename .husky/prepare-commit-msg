@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/h"
+
+# addIssueNumber.sh 스크립트를 실행
+bash ../addIssueNumber.sh "$1"
