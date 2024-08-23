@@ -23,8 +23,8 @@ const config: Config = {
       figtree: ['var(--font-figtree)']
     },
     fontSize: {
-      HeaderPC: ['1.25rem', { fontWeight: 700, lineHeight: 'normal' }],
-      HeaderMobile: ['2rem', { fontWeight: 200, lineHeight: 'normal' }]
+      HeaderPC: ['2rem', { fontWeight: 400, lineHeight: 'normal' }],
+      HeaderMobile: ['3.2rem', { fontWeight: 200, lineHeight: 'normal' }]
     },
     extend: {
       backgroundImage: {

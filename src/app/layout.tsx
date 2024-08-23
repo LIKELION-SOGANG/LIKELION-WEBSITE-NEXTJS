@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import '@/style/globals.css';
 import { Figtree, Pp, Pretendard } from '@/utils/Font'
+import Header from '@/components/common/Header'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,6 +19,7 @@ export default function RootLayout({
       className={`${Figtree.variable} ${Pp.variable} ${Pretendard.variable}`}>
       <body
         className={`${Figtree.className} ${Pp.className} ${Pretendard.className}`}>
+        <Header />
         {children}
       </body>
     </html>
