@@ -17,9 +17,11 @@ const config: Config = {
       grey: 'f4f4f4',
       black: '#00000'
     },
-    fontFamily:{
-      
-    }
+    fontFamily: {
+      pp: ['var(--font-pp)'],
+      pretendard: ['var(--font-pretendard)'],
+      figtree: ['var(--font-figtree)']
+    },
     fontSize: {
       HeaderPC: ['1.25rem', { fontWeight: 700, lineHeight: 'normal' }],
       HeaderMobile: ['2rem', { fontWeight: 200, lineHeight: 'normal' }]
