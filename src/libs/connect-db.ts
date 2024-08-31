@@ -1,7 +1,6 @@
 import { Mongoose, connect } from 'mongoose'
 
 const { DB_URL, DB_NAME } = process.env
-
 if (!DB_URL) {
   throw new Error('Please add your MongoDB URI to .env')
 }
