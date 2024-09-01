@@ -13,9 +13,9 @@ const config: Config = {
       Desktop: '1280px'
     },
     colors: {
-      white: '#fffff',
+      white: '#ffffff',
       grey: 'f4f4f4',
-      black: '#00000'
+      black: '#000000'
     },
     fontFamily: {
       pp: ['var(--font-pp)'],

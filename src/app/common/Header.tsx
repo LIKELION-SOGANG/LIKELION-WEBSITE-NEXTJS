@@ -6,7 +6,7 @@ import React from 'react'
 //
 function Header() {
   return (
-    <header className="w-full bg-black flex fixed top-0 p-[2.5rem]">
+    <header className="w-full flex fixed top-0 p-[2.5rem]">
       <div className="font-pp cursor-pointer text-HeaderPC">
         Like<span className="italic">lion</span> So
         <span className="italic">gang</span>
