@@ -14,7 +14,7 @@ const config: Config = {
     },
     colors: {
       white: '#ffffff',
-      grey: 'f4f4f4',
+      grey: '#f4f4f4',
       black: '#000000'
     },
     fontFamily: {
@@ -22,15 +22,16 @@ const config: Config = {
       pretendard: ['var(--font-pretendard)'],
       figtree: ['var(--font-figtree)']
     },
-    fontSize: {
-      HeaderPC: ['2rem', { fontWeight: 400, lineHeight: 'normal' }],
-      HeaderMobile: ['3.2rem', { fontWeight: 200, lineHeight: 'normal' }]
-    },
+
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
+      },
+      fontSize: {
+        HeaderPC: ['2rem', { fontWeight: 400, lineHeight: 'normal' }],
+        HeaderMobile: ['3.2rem', { fontWeight: 200, lineHeight: 'normal' }]
       }
     }
   },
