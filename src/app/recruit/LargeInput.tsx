@@ -8,14 +8,15 @@ interface LargeInputProps {
 const LargeInput = ({ item, questionNumber }: LargeInputProps) => {
   return (
     <div className="relative">
-      <div className="text-[1.6rem] font-semibold mb-[2rem]">
+      <div className="text-[1.6rem] font-medium mb-[2rem]">
         {questionNumber}. {item.prompt}
       </div>
       <textarea
+        maxLength={item.limit}
         style={{ resize: 'none' }}
-        className="border-[1px] border-[#b7b7b7] w-full h-[15rem] rounded-[1rem]"
+        className="overflow-hidden border-[1px] border-[#b7b7b7] w-full h-[15rem] rounded-[1rem] p-[1.5rem]"
       />
-      <div className="absolute right-[1.3rem] bottom-[1.1rem] text-[1.2rem] font-semibold">
+      <div className="absolute right-[1.3rem] bottom-[1.1rem] text-[1.2rem] font-medium">
         0 / 1000자
       </div>
     </div>

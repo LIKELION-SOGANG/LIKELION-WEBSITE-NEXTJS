@@ -85,3 +85,40 @@ export const FAQObj: FAQObj[] = [
     A: '모바일은 지원하고 있지 않습니다.'
   }
 ]
+
+export const questions = [
+  {
+    prompt:
+      '간단한 자기소개와 함께, 다양한 IT 동아리 중에서 멋쟁이사자처럼 서강대학교 12기를 선택하고 지원하시게 된 이유를 작성해주세요. ',
+    limit: 500
+  },
+  {
+    prompt:
+      '파트를 선택한 이유와 관련 경험을 해본 경험이 있는지 작성해주세요. 그리고 멋쟁이사자처럼에서 이 파트로 활동하면서 어떠한 성장을 희망하는지 작성해주세요.',
+    limit: 500
+  },
+  {
+    prompt:
+      '멋쟁이사자처럼 서강대학교는 협업과 팀워크를 중요한 가치로 생각하는 공동체입니다. 지원자 본인이 협업과 팀워크를 진행해보았던 경험과, 그 경험을 멋쟁이사자처럼 서강대학교에서 어떻게 적용시킬 수 있을지 작성해주세요. ',
+    limit: 500
+  },
+  {
+    prompt: '실현하고 싶은 자신만의 IT 서비스 아이디어에 대해 설명해주세요.',
+    limit: 500
+  }
+]
+
+export const meeting = [
+  {
+    interviewDate: `${formatDate(new Date())}`,
+    times: [18, 19, 20]
+  },
+  {
+    interviewDate: `${formatDate(new Date())}`,
+    times: [18, 19, 20]
+  },
+  {
+    interviewDate: `${formatDate(new Date())}`,
+    times: [18, 19, 20]
+  }
+]
