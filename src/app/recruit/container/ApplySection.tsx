@@ -4,6 +4,7 @@ import SmallInput from '../SmallInput'
 import ApplyHeader from '../ApplyHeader'
 import PersonalInformationForm from './PersonalInformationForm'
 import PersonalStatementForm from './PersonalStatementForm'
+import SaveComplete from './SaveComplete'
 
 const ApplySection = () => {
   return (
@@ -42,6 +43,7 @@ const ApplySection = () => {
 
         <PersonalInformationForm />
         <PersonalStatementForm />
+        <SaveComplete />
       </div>
     </div>
   )
