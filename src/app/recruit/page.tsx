@@ -5,6 +5,8 @@ import animation from '../../../public/lottie/animation.json'
 import FirstSection from './container/FirstSection'
 import SecondSection from './container/SecondSection'
 import ApplySection from './container/ApplySection'
+import PersonalInformationForm from './container/PersonalInformationForm'
+import PersonalStatementForm from './container/PersonalStatementForm'
 
 export default function RecruitPage() {
   return (
