@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default function ProjectPage() {
+export default function RecruitPage() {
   return <div>page</div>
 }

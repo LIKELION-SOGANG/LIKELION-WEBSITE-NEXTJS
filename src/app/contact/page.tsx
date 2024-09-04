@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default function ProjectPage() {
+export default function ContactPage() {
   return <div>page</div>
 }
