@@ -3,7 +3,7 @@ import React from 'react'
 const SelectPart = () => {
   return (
     <div className="text-[1.6rem]">
-      <div className="text-[#424242] font-medium mb-[1.3rem]">1. 지원분야</div>
+      <div className="text-[#424242] font-medium mb-[1.3rem]">지원분야</div>
       <div className="relative">
         <select className="w-full border-[1px] border-[#B7B7B7] p-[1.5rem] rounded-[1rem] appearance-none">
           <option value="">지원 분야를 선택해주세요.</option>

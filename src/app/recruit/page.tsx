@@ -7,6 +7,8 @@ import SecondSection from './container/SecondSection'
 import ApplySection from './container/ApplySection'
 import PersonalInformationForm from './container/PersonalInformationForm'
 import PersonalStatementForm from './container/PersonalStatementForm'
+import EditPersonalInfo from './container/EditPersonalInfo'
+import CheckingPass from './CheckingPass'
 
 export default function RecruitPage() {
   return (
@@ -14,6 +16,7 @@ export default function RecruitPage() {
       <FirstSection />
       <SecondSection />
       <ApplySection />
+      <CheckingPass />
     </div>
   )
 }

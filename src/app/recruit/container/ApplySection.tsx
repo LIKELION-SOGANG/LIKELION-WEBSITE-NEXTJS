@@ -5,6 +5,8 @@ import ApplyHeader from '../ApplyHeader'
 import PersonalInformationForm from './PersonalInformationForm'
 import PersonalStatementForm from './PersonalStatementForm'
 import SaveComplete from './SaveComplete'
+import EditPersonalInfo from './EditPersonalInfo'
+import CheckingPass from '../CheckingPass'
 
 const ApplySection = () => {
   return (
@@ -20,7 +22,10 @@ const ApplySection = () => {
               처음 지원서를 작성하신다면,
             </div>
             <div>
-              <Button title="지원서 생성하기" />
+              <Button
+                title="지원서 생성하기"
+                isable={true}
+              />
             </div>
           </div>
 
@@ -34,7 +39,7 @@ const ApplySection = () => {
             <div className="mb-[1.2rem]"></div>
             <Button
               title="지원서 수정하기"
-              defaultColor="d9d9d9"
+              isable={false}
             />
           </div>
 
@@ -44,6 +49,7 @@ const ApplySection = () => {
         <PersonalInformationForm />
         <PersonalStatementForm />
         <SaveComplete />
+        <EditPersonalInfo />
       </div>
     </div>
   )

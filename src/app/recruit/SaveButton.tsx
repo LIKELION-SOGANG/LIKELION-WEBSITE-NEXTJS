@@ -14,7 +14,10 @@ const SaveButton = () => {
       </div>
 
       <div className="mb-[1rem] mt-[2.4rem]">
-        <Button title="지원서 저장하기" />
+        <Button
+          title="지원서 저장하기"
+          isable={true}
+        />
       </div>
     </div>
   )
