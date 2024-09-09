@@ -2,21 +2,16 @@ import React from 'react'
 import { scheduleObj } from '../MockData'
 import { areaObj } from '../MockData'
 import { FAQObj } from '../MockData'
-import ArticleItem from '../ArticleItem'
+import ScheduleItem from '../ScheduleItem'
 import FAQItem from '../FAQItem'
+import AreaItem from '../AreaItem'
 
 const SecondSection = () => {
   return (
-    <div className="bg-white p-[4rem] ">
-      <ArticleItem
-        items={scheduleObj}
-        title="Schedule"
-      />
+    <div className="bg-white p-[4rem] text-black">
+      <ScheduleItem items={scheduleObj} />
 
-      <ArticleItem
-        items={areaObj}
-        title="Area"
-      />
+      <AreaItem items={areaObj} />
 
       <FAQItem
         items={FAQObj}
