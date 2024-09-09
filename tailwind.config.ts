@@ -32,6 +32,15 @@ const config: Config = {
       fontSize: {
         HeaderPC: ['2rem', { fontWeight: 400, lineHeight: 'normal' }],
         HeaderMobile: ['3.2rem', { fontWeight: 200, lineHeight: 'normal' }]
+      },
+      keyframes: {
+        infiniteSlide: {
+          '0%': { transform: 'translate(0%)' },
+          '100%': { transform: 'translate(-100%)' }
+        }
+      },
+      animation: {
+        infiniteSlide: 'infiniteSlide 5s linear infinite'
       }
     }
   },

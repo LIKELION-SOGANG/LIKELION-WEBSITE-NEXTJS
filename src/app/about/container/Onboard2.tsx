@@ -21,12 +21,12 @@ export default function Onboard2() {
       </div>
       <div className="flex justify-center items-center w-full h-screen bg-white">
         <div className="text-black flex flex-col items-center">
-          <div>WE ARE</div>
-          <div className="font-pp cursor-pointer text-9xl">
+          <div className="text-4xl">WE ARE</div>
+          <div className="font-pp cursor-pointer text-8xl">
             Like<span className="italic">lion</span> So
             <span className="italic">gang</span>
           </div>
-          <div className="mt-32 text-center">
+          <div className="mt-32 text-center text-3xl">
             멋쟁이사자처럼 서강대학교는 대면 교육 세션, 데모데이 등 다채로운
             활동을 통해
             <br /> 매년 구성원들의{' '}
