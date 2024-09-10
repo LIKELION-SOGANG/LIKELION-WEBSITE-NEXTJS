@@ -16,7 +16,7 @@ const ScheduleItem = ({ items }: Items) => {
               key={index}
               className="flex-1 bg-grey p-[1.7rem] tablet:gap-[2rem] rounded-[1rem]">
               <div className="font-semibold text-[1.6rem]">{item.name}</div>
-              <div className="mt-[1.4rem] font-medium text-[1.2rem]">
+              <div className="mt-[1.4rem] font-medium text-[1.2rem] whitespace-pre-line">
                 {item.date}
               </div>
             </div>

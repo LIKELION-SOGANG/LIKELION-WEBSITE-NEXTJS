@@ -2,6 +2,7 @@ import React from 'react'
 import SmallInput from './SmallInput'
 import Button from './Button'
 import Passed from './container/Passed'
+import Nonpassed from './container/Nonpassed'
 
 const CheckingPass = () => {
   return (
@@ -19,6 +20,7 @@ const CheckingPass = () => {
       </div>
 
       <Passed />
+      <Nonpassed />
     </div>
   )
 }
