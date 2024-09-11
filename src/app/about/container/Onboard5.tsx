@@ -28,42 +28,42 @@ export default function Onboard5() {
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/html.png"
+                src="icon/logo/stack/html.png"
                 alt="sprint-front"
               />
             </div>
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/css.png"
+                src="icon/logo/stack/image 29.png"
                 alt="sprint-front"
               />
             </div>
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/js.png"
+                src="icon/logo/stack/javascript.png"
                 alt="sprint-front"
               />
             </div>
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/react.png"
+                src="icon/logo/stack/react.png"
                 alt="sprint-front"
               />
             </div>
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/git.png"
+                src="icon/logo/stack/git.png"
                 alt="sprint-front"
               />
             </div>
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/github.png"
+                src="icon/logo/stack/github.png"
                 alt="sprint-front"
               />
             </div>
@@ -76,42 +76,42 @@ export default function Onboard5() {
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/html.png"
+                src="icon/logo/stack/html.png"
                 alt="sprint-front"
               />
             </div>
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/python.png"
+                src="icon/logo/stack/python.png"
                 alt="sprint-front"
               />
             </div>
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/django.png"
+                src="icon/logo/stack/django.png"
                 alt="sprint-front"
               />
             </div>
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/aws.png"
+                src="icon/logo/stack/aws.png"
                 alt="sprint-front"
               />
             </div>
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/git.png"
+                src="icon/logo/stack/git.png"
                 alt="sprint-front"
               />
             </div>
             <div className="flex justify-center items-center w-[8vw] h-[8vw] bg-white rounded-[50%] p-4">
               <img
                 className="w-[5vw]"
-                src="images/about/github.png"
+                src="icon/logo/stack/github.png"
                 alt="sprint-front"
               />
             </div>

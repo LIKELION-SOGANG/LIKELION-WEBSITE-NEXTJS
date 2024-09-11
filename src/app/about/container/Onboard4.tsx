@@ -20,7 +20,7 @@ export default function Onboard4() {
             <img
               className="w-[16rem]"
               key={i}
-              src={`images/about/${el}.png`}
+              src={`icon/logo/company/${el}.png`}
               alt="possibility"
             />
           ))}
