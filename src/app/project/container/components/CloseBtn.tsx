@@ -9,9 +9,9 @@ export default function CloseBtn() {
       <Image
         src="/icon/button/closeX-black.svg"
         alt="Link icon"
-        width={'30'}
-        height={'30'}
-        className="absolute right-[18px] top-[18px] cursor-pointer"
+        width={'20'}
+        height={'20'}
+        className="absolute tablet:right-[18px] right-[30px] tablet:top-[18px] top-[53px] tablet:w-[30px] tablet:h-[30px] cursor-pointer"
       />
     </Link>
   )

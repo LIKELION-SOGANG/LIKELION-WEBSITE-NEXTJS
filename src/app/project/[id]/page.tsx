@@ -12,16 +12,18 @@ interface Props {
 export default function ModalPage(props: Props) {
   return props.params.id ? (
     <div>
-      <div className="fixed left-0 top-0 opacity-30 bg-black w-screen h-screen "></div>
-      <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[600px] h-[862px] drop-shadow-[0px_4px_100px_rgba(0,0,0,0.50)] backdrop-blur-xl rounded-3xl bg-white flex flex-col text-black px-12 pt-[90px] font-figtree  ">
+      <div className="tablet:block hidden">
+        <div className="fixed left-0 top-0 opacity-30 bg-black w-screen h-screen "></div>
+      </div>
+      <div className="tablet:absolute tablet:top-[10%] tablet:left-1/2 tablet:-translate-x-1/2 tablet:w-[600px] tablet:h-[862px] tablet:drop-shadow-[0px_4px_100px_rgba(0,0,0,0.50)] tablet:backdrop-blur-xl tablet:rounded-3xl bg-white flex flex-col text-black px-[30px] tablet:pt-[90px] pt-[108px] font-figtree fixed top-0 left-0 w-screen  h-screen  ">
         <div className="flex flex-col">
-          <span className=" text-[48px]  font-semibold mb-[9px] leading-tight ">
+          <span className=" tablet:text-[48px] text-[36px] font-semibold mb-[9px] leading-tight ">
             YouCheck
           </span>
           <span className="text-[16px] font-normal mb-[12px] leading-tight">
             11th | 2023
           </span>
-          <p className="font-pretendard text-[20px] font-medium mb-[30px] leading-normal">
+          <p className="font-pretendard tablet:text-[20px] text-[16px] font-medium mb-[30px] leading-normal">
             Team 효자동개발자
             <br />
             정고은 이선명 정인영 임정연 장세환 오은택 김유이
@@ -32,9 +34,9 @@ export default function ModalPage(props: Props) {
           alt="project image"
           width={'0'}
           height={'0'}
-          className="rounded-2xl mb-[30px] w-[537px] h-[314px]"
+          className="rounded-2xl mb-[30px] tablet:w-[537px] w-full tablet:h-[314px] h-[calc(63%)*(201/333)]"
         />
-        <p className="font-pretendard text-[20px] font-medium leading-normal">
+        <p className="font-pretendard tablet:text-[20px] text-[14px] font-medium leading-normal">
           어머님, 그리고 당신은 멀리 북간도에 계십니다. 딴은 밤을 세워 우는
           벌레는 부끄러운 이름을 슬퍼하는 까닭입니다. 계절이 지나가는 하늘에는
           가을로 가득 차 있습니다.

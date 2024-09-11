@@ -7,7 +7,7 @@ export default function TapBtn({
 }) {
   return (
     <div
-      className={`border border-white rounded-2xl px-4 pt-[14px] pb-[8px] font-pp text-[24px] italic leading-[0.6] font-normal cursor-pointer hover:bg-white hover:text-black hover:mix-blend-screen transition-color duration-200 ease-in-out ${isSelected ? 'bg-white text-black mix-blend-screen' : 'bg-transparent'}`}>
+      className={`border-none tablet:border-solid border border-white text-right tablet:text-center rounded-2xl tablet:px-4 tablet:pt-[14px] tablet:pb-[8px] font-pp text-[24px] italic leading-none tablet:leading-[0.6] font-normal cursor-pointer tablet:hover:bg-white tablet:hover:text-black tablet:hover:mix-blend-screen transition-color duration-200 ease-in-out ${isSelected ? 'text-white tablet:bg-white tablet:text-black tablet:mix-blend-screen' : 'text-[#686868] tablet:text-white tablet:bg-transparent'}`}>
       {text}
     </div>
   )
