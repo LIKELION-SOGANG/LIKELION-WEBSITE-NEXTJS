@@ -7,6 +7,11 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
+    screens: {
+      mobile: '480px',
+      tablet: '768px',
+      Desktop: '1280px'
+    },
     fontFamily: {
       pp: ['var(--font-pp)'],
       pretendard: ['var(--font-pretendard)'],
@@ -62,7 +67,6 @@ const config: Config = {
         infiniteSlide: 'infiniteSlide 5s linear infinite forwards',
         scaleLeft: 'scaleLeft 0.5s ease-in',
         scaleDownCenter: 'scaleDownCenter 0.5s ease-in forwards'
-      }
     }
   },
   plugins: []

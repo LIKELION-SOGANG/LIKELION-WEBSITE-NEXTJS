@@ -1,5 +1,11 @@
 import React from 'react'
+import Contact1 from './container/Contact1'
+import Contact2 from './container/Contact2'
 
 export default function ContactPage() {
-  return <div>page</div>
+  return (
+    <div>
+      <Contact1 />
+    </div>
+  )
 }
