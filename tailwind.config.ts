@@ -10,14 +10,13 @@ const config: Config = {
     screens: {
       mobile: '480px',
       tablet: '768px',
-      Desktop: '1280px'
+      desktop: '1280px' // 대소문자 통일
     },
     fontFamily: {
       pp: ['var(--font-pp)'],
       pretendard: ['var(--font-pretendard)'],
       figtree: ['var(--font-figtree)']
     },
-
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -29,12 +28,6 @@ const config: Config = {
         grey: '#f4f4f4',
         black: '#000000'
       },
-      screens: {
-        mobile: '480px',
-        tablet: '768px',
-        Desktop: '1280px'
-      },
-
       fontSize: {
         HeaderPC: ['2rem', { fontWeight: 400, lineHeight: 'normal' }],
         HeaderMobile: ['3.2rem', { fontWeight: 200, lineHeight: 'normal' }]
@@ -67,8 +60,10 @@ const config: Config = {
         infiniteSlide: 'infiniteSlide 5s linear infinite forwards',
         scaleLeft: 'scaleLeft 0.5s ease-in',
         scaleDownCenter: 'scaleDownCenter 0.5s ease-in forwards'
+      }
     }
   },
   plugins: []
 }
+
 export default config
