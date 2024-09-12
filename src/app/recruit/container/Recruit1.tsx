@@ -1,7 +1,7 @@
 import React from 'react'
 import ScrollLottie from '../ScrollLottie'
 
-const FirstSection = () => {
+const Recruit1 = () => {
   return (
     <div>
       <div className="flex justify-end">
@@ -27,4 +27,4 @@ const FirstSection = () => {
   )
 }
 
-export default FirstSection
+export default Recruit1

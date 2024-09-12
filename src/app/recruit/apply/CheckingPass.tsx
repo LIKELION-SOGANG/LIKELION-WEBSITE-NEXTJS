@@ -1,8 +1,8 @@
 import React from 'react'
 import SmallInput from './SmallInput'
 import Button from './Button'
-import Passed from './container/Passed'
-import Nonpassed from './container/Nonpassed'
+import Passed from './Passed'
+import Nonpassed from './Nonpassed'
 
 const CheckingPass = () => {
   return (

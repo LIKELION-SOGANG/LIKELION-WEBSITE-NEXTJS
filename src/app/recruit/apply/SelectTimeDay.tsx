@@ -1,5 +1,5 @@
 import React from 'react'
-import { meeting } from './MockData'
+import { meeting } from '../../../utils/recruitMockData'
 
 const SelectTimeDay = () => {
   return (

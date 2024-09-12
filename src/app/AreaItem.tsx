@@ -1,5 +1,5 @@
 import React from 'react'
-import { AreaObj } from './MockData'
+import { AreaObj } from '../utils/recruitMockData'
 
 interface Items {
   items: AreaObj[]

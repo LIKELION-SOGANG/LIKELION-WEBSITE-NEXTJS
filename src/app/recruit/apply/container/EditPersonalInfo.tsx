@@ -1,7 +1,10 @@
 import React from 'react'
 import Progress from '../Progress'
 import SmallInput from '../SmallInput'
-import { personalInformation, personalPhoneNumber } from '../MockData'
+import {
+  personalInformation,
+  personalPhoneNumber
+} from '../../../../utils/recruitMockData'
 import SelectPart from '../SelectPart'
 import Button from '../Button'
 

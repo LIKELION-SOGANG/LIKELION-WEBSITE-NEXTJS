@@ -1,9 +1,11 @@
 import React from 'react'
-import ApplyHeader from '../ApplyHeader'
 import SmallInput from '../SmallInput'
 import Button from '../Button'
+import {
+  personalInformation,
+  personalPhoneNumber
+} from '@/utils/recruitMockData'
 import Progress from '../Progress'
-import { personalInformation, personalPhoneNumber } from '../MockData'
 
 const PersonalInformationForm = () => {
   return (

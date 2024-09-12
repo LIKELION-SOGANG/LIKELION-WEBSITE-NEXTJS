@@ -1,7 +1,7 @@
 import React from 'react'
 import LargeInput from '../LargeInput'
 import SelectPart from '../SelectPart'
-import { questions } from '../MockData'
+import { questions } from '@/utils/recruitMockData'
 import SelectTimeDay from '../SelectTimeDay'
 import SmallInput from '../SmallInput'
 import SaveButton from './../SaveButton'

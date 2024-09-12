@@ -2,15 +2,17 @@ import React from 'react'
 import Button from '../Button'
 import SmallInput from '../SmallInput'
 import ApplyHeader from '../ApplyHeader'
-import PersonalInformationForm from './PersonalInformationForm'
-import PersonalStatementForm from './PersonalStatementForm'
 import SaveComplete from './SaveComplete'
 import EditPersonalInfo from './EditPersonalInfo'
 import CheckingPass from '../CheckingPass'
+import PersonalInformationForm from './PersonalInformationForm'
+import PersonalStatementForm from './PersonalStatementForm'
+import Passed from '../Passed'
+import Nonpassed from '../Nonpassed'
 
 const ApplySection = () => {
   return (
-    <div className="pt-[2rem] bg-white text-black">
+    <section className="pt-[2rem] bg-white text-black">
       <div className="flex flex-col justify-center items-center ">
         <div className="w-[56.2rem] ">
           <ApplyHeader />
@@ -50,8 +52,10 @@ const ApplySection = () => {
         <PersonalStatementForm />
         <SaveComplete />
         <EditPersonalInfo />
+        <Passed />
+        <Nonpassed />
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FAQObj } from './MockData'
+import { FAQObj } from '../utils/recruitMockData'
 
 interface Items {
   items: FAQObj[]
