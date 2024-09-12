@@ -13,7 +13,6 @@ export default function Contact1() {
         <img
           className="w-[35vw] h-[35vw] md:w-[500px] md:h-[500px] origin-top-left"
           src="/images/contact/obj2.png"
-          style={{ marginRight: '-120px' }}
         />
       </div>
       <div className="text-center mt-[-230px]">
