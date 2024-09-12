@@ -1,10 +1,10 @@
 import React from 'react'
-import LargeInput from '../LargeInput'
-import SelectPart from '../SelectPart'
+import LargeInput from '../components/LargeInput'
+import SelectPart from '../components/SelectPart'
 import { questions } from '@/utils/recruitMockData'
-import SelectTimeDay from '../SelectTimeDay'
-import SmallInput from '../SmallInput'
-import SaveButton from './../SaveButton'
+import SelectTimeDay from '../components/SelectTimeDay'
+import SmallInput from '../components/SmallInput'
+import SaveButton from '../components/SaveButton'
 
 const PersonalStatementForm = () => {
   return (

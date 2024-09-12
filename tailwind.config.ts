@@ -7,17 +7,17 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
-    screens: {
-      mobile: '480px',
-      tablet: '768px',
-      desktop: '1280px' // 대소문자 통일
-    },
     fontFamily: {
       pp: ['var(--font-pp)'],
       pretendard: ['var(--font-pretendard)'],
       figtree: ['var(--font-figtree)']
     },
     extend: {
+      screens: {
+        mobile: '480px',
+        tablet: '768px',
+        desktop: '1280px' // 대소문자 통일
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
