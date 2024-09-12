@@ -3,9 +3,9 @@ import React from 'react'
 export default function Contact1() {
   return (
     <div>
-      <div className="relative w-full h-full px-64 mt-[150px]">
+      <div className="relative w-full h-screen">
         <img
-          className="w-[30vw] h-[30vw] md:w-[500px] md:h-[500px]"
+          className="absolute w-[48rem] h-[48rem] left-[18rem] top-[-15rem]"
           src="/images/contact/obj1.png"
         />
       </div>
