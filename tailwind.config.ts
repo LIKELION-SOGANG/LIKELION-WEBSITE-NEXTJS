@@ -12,11 +12,7 @@ const config: Config = {
       tablet: '768px',
       Desktop: '1280px'
     },
-    colors: {
-      white: '#ffffff',
-      grey: '#f4f4f4',
-      black: '#000000'
-    },
+
     fontFamily: {
       pp: ['var(--font-pp)'],
       pretendard: ['var(--font-pretendard)'],
@@ -32,6 +28,11 @@ const config: Config = {
       fontSize: {
         HeaderPC: ['2rem', { fontWeight: 400, lineHeight: 'normal' }],
         HeaderMobile: ['3.2rem', { fontWeight: 200, lineHeight: 'normal' }]
+      },
+      colors: {
+        white: '#ffffff',
+        grey: '#f4f4f4',
+        black: '#000000'
       }
     }
   },
