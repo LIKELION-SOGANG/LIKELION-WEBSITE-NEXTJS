@@ -1,5 +1,5 @@
 import React from 'react'
-import LikelionGreyLogo from '../../../../public/icon/logo/likelion-grey.svg'
+import LikelionGreyLogo from '../../../../../public/icon/logo/likelion-grey.svg'
 const Nonpassed = () => {
   return (
     <div className="text-black flex flex-col justify-center items-center w-[56.2rem]">
