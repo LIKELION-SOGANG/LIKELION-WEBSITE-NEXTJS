@@ -1,6 +1,5 @@
 import React from 'react'
 import TabContents from './TabContents'
-import { getMembers } from '@/app/api/people/getMembers'
 
 export default async function SecondSection() {
   const selectedTab = 7
@@ -106,7 +105,7 @@ export default async function SecondSection() {
   ]
 
   return (
-    <div>
+    <section>
       <div className="relative w-full h-screen bg-white">
         <div className="flex justify-center items-end">
           {mockGenerations.map(gen => (
@@ -120,6 +119,6 @@ export default async function SecondSection() {
         </div>
         <TabContents data={mockMembers} />
       </div>
-    </div>
+    </section>
   )
 }

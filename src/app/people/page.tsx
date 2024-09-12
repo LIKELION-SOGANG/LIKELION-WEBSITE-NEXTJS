@@ -1,12 +1,12 @@
 import React from 'react'
-import FirstSection from './container/FirstSection'
-import SecondSection from './container/SecondSection'
+import People1 from './container/People1'
+import People2 from './container/People2'
 
 export default function PeoplePage() {
   return (
-    <div>
-      <FirstSection />
-      <SecondSection />
-    </div>
+    <main>
+      <People1 />
+      <People2 />
+    </main>
   )
 }
