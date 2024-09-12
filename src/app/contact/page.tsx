@@ -1,11 +1,11 @@
 import React from 'react'
-import Object from './container/Object'
-import Links from './container/Links'
+import Contact1 from './container/Contact1'
+import Contact2 from './container/Contact2'
 
 export default function ContactPage() {
   return (
     <div>
-      <Object />
+      <Contact1 />
     </div>
   )
 }
