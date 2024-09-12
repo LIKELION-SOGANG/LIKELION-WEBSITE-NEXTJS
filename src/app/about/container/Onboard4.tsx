@@ -5,7 +5,7 @@ const companies = ['samsung', 'coupang', 'kaist', 'lg', 'naver', 'shinsegae']
 
 export default function Onboard4() {
   return (
-    <div className="w-auto h-screen flex flex-col items-center justify-center bg-white">
+    <section className="w-auto h-screen flex flex-col items-center justify-center bg-white">
       <div className="font-pp cursor-pointer text-6xl font-normal">
         From Like<span className="italic">lion</span> So
         <span className="italic">gangs</span>
@@ -26,6 +26,6 @@ export default function Onboard4() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

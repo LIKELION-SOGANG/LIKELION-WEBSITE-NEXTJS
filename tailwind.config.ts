@@ -7,16 +7,6 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
-    screens: {
-      mobile: '480px',
-      tablet: '768px',
-      Desktop: '1280px'
-    },
-    colors: {
-      white: '#ffffff',
-      grey: '#f4f4f4',
-      black: '#000000'
-    },
     fontFamily: {
       pp: ['var(--font-pp)'],
       pretendard: ['var(--font-pretendard)'],
@@ -29,6 +19,17 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
+      colors: {
+        white: '#ffffff',
+        grey: '#f4f4f4',
+        black: '#000000'
+      },
+      screens: {
+        mobile: '480px',
+        tablet: '768px',
+        Desktop: '1280px'
+      },
+
       fontSize: {
         HeaderPC: ['2rem', { fontWeight: 400, lineHeight: 'normal' }],
         HeaderMobile: ['3.2rem', { fontWeight: 200, lineHeight: 'normal' }]
@@ -37,10 +38,30 @@ const config: Config = {
         infiniteSlide: {
           '0%': { transform: 'translate(0%)' },
           '100%': { transform: 'translate(-100%)' }
+        },
+        scaleLeft: {
+          '0%': {
+            transform: 'scaleX(0)',
+            transformOrigin: '0% 0%'
+          },
+          '100%': {
+            transform: 'scale(1)',
+            transformOrigin: '0% 0%'
+          }
+        },
+        scaleDownCenter: {
+          '0%': {
+            transform: 'scaleX(1)'
+          },
+          '100%': {
+            transform: 'scaleX(0.3)'
+          }
         }
       },
       animation: {
-        infiniteSlide: 'infiniteSlide 5s linear infinite'
+        infiniteSlide: 'infiniteSlide 5s linear infinite forwards',
+        scaleLeft: 'scaleLeft 0.5s ease-in',
+        scaleDownCenter: 'scaleDownCenter 0.5s ease-in forwards'
       }
     }
   },

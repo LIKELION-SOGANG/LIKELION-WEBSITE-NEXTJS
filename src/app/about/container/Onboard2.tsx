@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Onboard2() {
   return (
-    <div>
+    <section>
       <div className="flex justify-center items-center w-full h-screen bg-white">
         <div className="text-black text-HeaderPC">
           멋쟁이사자처럼 대학은 국내외 <span className="font-black">121개</span>{' '}
@@ -40,6 +40,6 @@ export default function Onboard2() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

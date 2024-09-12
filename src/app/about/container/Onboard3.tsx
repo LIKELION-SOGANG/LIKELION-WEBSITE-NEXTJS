@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Onboard3() {
   return (
-    <div>
+    <section>
       <div className="w-full h-[80vh] bg-black text-white flex flex-col justify-center items-center">
         <div className="font-pp cursor-pointer text-8xl">
           Like<span className="italic">lion</span> So
@@ -44,32 +44,49 @@ export default function Onboard3() {
         </div>
       </div>
       <div className="w-full h-screen flex items-center bg-black text-white">
-        <img
-          className="w-1/2 h-1/2"
-          src="images/about/hackathon.png"
-          alt=""
-        />
-        <div className="h-1/2 flex flex-col justify-end pl-12">
-          <div className="font-pp text-9xl">Awards</div>
-          <div className="mt-16 flex flex-col gap-3 text-2xl">
-            <Link
-              target="_blank"
-              href="https://platum.kr/archives/212513">
-              2023.08 | 멋쟁이사자처럼 전국 연합 해커톤 3위 (효자동개발자 팀) ↘
-            </Link>
-            <Link
-              target="_blank"
-              href="https://www.instagram.com/p/CTNGreslBDy/?img_index=1">
-              2021.08 | 멋쟁이사자처럼 전국 연합 해커톤 1위 (URL repo 팀) ↘
-            </Link>
-            <Link
-              target="_blank"
-              href="https://www.instagram.com/p/CRbGH4rjBW2/?img_index=1">
-              2021.07 | 멋쟁이사자처럼 전국 연합 아이디어톤 1위 (URL repo 팀) ↘
-            </Link>
+        <div className="w-full h-auto flex items-end">
+          <img
+            className="w-1/2 h-auto"
+            src="images/about/hackathon.png"
+            alt=""
+          />
+          <div className="h-1/2 flex flex-col justify-end pl-12">
+            <div className="font-pp text-9xl">Awards</div>
+            <nav className="mt-16 flex flex-col gap-3 text-2xl">
+              <a
+                className="group"
+                target="_blank"
+                href="https://platum.kr/archives/212513">
+                <span>
+                  2023.08 | 멋쟁이사자처럼 전국 연합 해커톤 3위 (효자동개발자
+                  팀)↘
+                </span>
+                <div className="bg-black w-full h-[0.5px] group-hover:animate-scaleLeft group-hover:bg-white"></div>
+              </a>
+              <a
+                className="group"
+                target="_blank"
+                href="https://www.instagram.com/p/CTNGreslBDy/?img_index=1">
+                <span>
+                  2021.08 | 멋쟁이사자처럼 전국 연합 해커톤 1위 (
+                  <span className="font-pp">URL repo</span> 팀) ↘
+                </span>
+                <div className="bg-black w-full h-[0.5px] group-hover:animate-scaleLeft group-hover:bg-white"></div>
+              </a>
+              <a
+                className="group"
+                target="_blank"
+                href="https://www.instagram.com/p/CRbGH4rjBW2/?img_index=1">
+                <span>
+                  2021.07 | 멋쟁이사자처럼 전국 연합 아이디어톤 1위 (
+                  <span className="font-pp">URL repo</span> 팀) ↘
+                </span>
+                <div className="bg-black w-full h-[0.5px] group-hover:animate-scaleLeft group-hover:bg-white"></div>
+              </a>
+            </nav>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

@@ -7,12 +7,12 @@ import Onboard1 from './container/Onboard1'
 
 export default function AboutPage() {
   return (
-    <div>
+    <main>
       <Onboard1 />
       <Onboard2 />
       <Onboard3 />
       <Onboard4 />
       <Onboard5 />
-    </div>
+    </main>
   )
 }
