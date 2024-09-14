@@ -1,7 +1,29 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function TabItem({ data }) {
+interface AdultLion {
+  id: number
+  name: string
+  emoji: string
+  part: string
+  is_president: boolean
+  is_vice_president: boolean
+}
+interface BabyLion {
+  id: number
+  name: string
+}
+interface MemberData {
+  mockAdultLion: AdultLion[]
+  mockBabyLion: BabyLion[]
+  mockGeneration: string
+}
+
+interface TabItemProps {
+  data: MemberData[]
+}
+
+export default function TabItem({ data }: TabItemProps) {
   const adult_lion = data[0].mockAdultLion
   const baby_lion = data[0].mockBabyLion
   const generation = data[0].mockGeneration
