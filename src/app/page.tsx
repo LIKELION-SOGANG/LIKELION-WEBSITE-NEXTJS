@@ -1,5 +1,17 @@
+import Onboard1 from './about/container/Onboard1'
+import Onboard2 from './about/container/Onboard2'
+import Onboard3 from './about/container/Onboard3'
+import Onboard4 from './about/container/Onboard4'
+import Onboard5 from './about/container/Onboard5'
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+    <main>
+      <Onboard1 />
+      <Onboard2 />
+      <Onboard3 />
+      <Onboard4 />
+      <Onboard5 />
+    </main>
   )
 }
