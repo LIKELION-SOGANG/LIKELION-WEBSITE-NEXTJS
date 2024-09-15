@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server'
-import { getMembers } from './getMembers'
+import { getMembers } from '../../../libs/getMembers'
 
 export async function GET(request: NextRequest) {
   try {
