@@ -5,7 +5,7 @@ export default function Contact1() {
     <div>
       <div className="relative w-full h-screen overflow-x-hidden">
         <img
-          className="absolute w-[33vw] h-[33vw] left-[11.1vw] top-[-10vw]"
+          className=" absolute desktop:left-[11.1vw] tablet:left-[11.1vw] mobile:left-[50vw] w-[33vw] h-[33vw] top-[-10vw]"
           src="/images/contact/obj1.png"
         />
         <img
@@ -14,7 +14,7 @@ export default function Contact1() {
         />
       </div>
       <div className="text-center mt-[-24vw]">
-        <div className="text-black text-[6rem] font-pp font-thin">
+        <div className="text-[6rem] text-black font-pp font-thin">
           Connect With Us!
         </div>
       </div>
