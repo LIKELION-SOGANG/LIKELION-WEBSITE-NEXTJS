@@ -1,11 +1,11 @@
 import React from 'react'
-import SmallInput from '../SmallInput'
-import Button from '../Button'
+import SmallInput from '../components/SmallInput'
+import Button from '../components/Button'
 import {
   personalInformation,
   personalPhoneNumber
 } from '@/utils/recruitMockData'
-import Progress from '../Progress'
+import Progress from '../components/Progress'
 
 const PersonalInformationForm = () => {
   return (

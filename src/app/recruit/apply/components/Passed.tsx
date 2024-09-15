@@ -1,5 +1,5 @@
 import React from 'react'
-import LikelionGreyLogo from '../../../../public/icon/logo/likelion-grey.svg'
+import LikelionGreyLogo from '../../../../../public/icon/logo/likelion-grey.svg'
 
 const Passed = () => {
   return (

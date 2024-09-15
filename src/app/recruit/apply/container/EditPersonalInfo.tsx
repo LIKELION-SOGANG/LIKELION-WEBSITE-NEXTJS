@@ -1,12 +1,12 @@
 import React from 'react'
-import Progress from '../Progress'
-import SmallInput from '../SmallInput'
+import Progress from '../components/Progress'
+import SmallInput from '../components/SmallInput'
 import {
   personalInformation,
   personalPhoneNumber
 } from '../../../../utils/recruitMockData'
-import SelectPart from '../SelectPart'
-import Button from '../Button'
+import SelectPart from '../components/SelectPart'
+import Button from '../components/Button'
 
 const EditPersonalInfo = () => {
   return (

@@ -4,7 +4,7 @@ import Lottie from 'react-lottie-player'
 import animation from '../../../public/lottie/animation.json'
 import ApplySection from './apply/container/ApplySection'
 import EditPersonalInfo from './apply/container/EditPersonalInfo'
-import CheckingPass from './apply/CheckingPass'
+import CheckingPass from './apply/components/CheckingPass'
 import Recruit1 from './container/Recruit1'
 import Recruit2 from './container/Recruit2'
 
