@@ -55,7 +55,8 @@ export default function Contact2() {
             className="desktop:text-[6rem] tablet:text-[6rem] mobile:text-[2.8rem] text-black font-pp font-normal group inline-block"
             target="_blank">
             https://likelion.university/ ↘︎
-            <div className=" h-[3px] -mt-6 group-hover:animate-scaleLeft group-hover:bg-black "></div>
+            <div
+              className={` h-[3px] -mt-6 group-hover:animate-scaleLeft group-hover:bg-black `}></div>
           </a>
         </div>
       </div>
