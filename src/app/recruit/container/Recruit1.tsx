@@ -3,10 +3,10 @@ import ScrollLottie from '../ScrollLottie'
 
 const Recruit1 = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div className="flex justify-end">
-        <div className="w-full relative h-[1268px] m-[36px_0_150px_200px] max-tablet:ml-0 box-border flex justify-end">
-          <div className=" w-full -z-10 flex justify-center absolute h-full bg-[url('/images/about/obj2.png')] bg-lightgray bg-center bg-cover bg-no-repeat"></div>
+        <div className="w-[1270px] relative h-[1270px] m-[36px_0_150px_200px] max-tablet:ml-0 box-border flex justify-end">
+          <div className="w-[1270px] max-tablet:w-[1270px] // max-desktop:right-[-20rem] max-tablet:right-[-50rem] max-mobile:right-[-62.5rem] // max-tablet:top-[-10rem] -z-10 flex justify-center absolute h-full bg-[url('/images/about/obj2.png')] bg-lightgray bg-center bg-cover bg-no-repeat"></div>
         </div>
       </div>
       <div className="flex justify-center ">
