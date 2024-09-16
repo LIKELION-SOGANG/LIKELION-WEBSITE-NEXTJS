@@ -8,7 +8,9 @@ interface Items {
 const ScheduleItem = ({ items }: Items) => {
   return (
     <div className="flex flex-col justify-center items-center text-black mb-[12rem]  max-tablet:mb-[12.7rem]">
-      <div className="font-pp text-[3.2rem] italic mb-[3.8rem]">Schedule</div>
+      <div className="font-pp max-tablet:text-[2.4rem] max-desktop:text-[3.2rem] italic mb-[3.8rem]">
+        Schedule
+      </div>
       <div className="flex max-tablet:flex-col gap-[2.8rem] w-full max-w-[97rem]">
         {items.map((item, index) => {
           return (
