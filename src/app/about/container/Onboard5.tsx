@@ -23,7 +23,7 @@ export default function Onboard5() {
     <section>
       <div className="flex flex-col text-white justify-center items-center bg-black w-full h-[250vh] mobile:h-[160vh]">
         <div className="font-pp text-5xl">Timeline</div>
-        <div className="text-2xl mt-[3rem]">
+        <div className="text-1xl mobile:text-2xl mt-[3rem]">
           멋쟁이사자처럼 서강대학교는 3월부터 11월까지 다양한 활동을 함께
           합니다.
         </div>

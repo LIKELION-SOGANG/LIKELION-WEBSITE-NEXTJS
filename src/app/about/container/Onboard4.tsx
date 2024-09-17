@@ -13,7 +13,7 @@ const companies = [
 
 export default function Onboard4() {
   return (
-    <section className="overflow-hidden w-[screen] h-screen flex flex-col items-center justify-center bg-white">
+    <section className="overflow-hidden w-[screen] h-screen flex flex-col items-center justify-center bg-white text-black">
       <div className="font-pp cursor-pointer text-4xl tablet:text-6xl font-normal">
         From Like<span className="italic">lion</span> So
         <span className="italic">gangs</span>
