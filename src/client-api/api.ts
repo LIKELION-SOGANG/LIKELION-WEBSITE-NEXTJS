@@ -5,3 +5,9 @@ export const getAllMembers = async () => {
   const { data } = await res.json()
   return data
 }
+
+export const getAllProjects = async () => {
+  const res = await fetch(`${API_END_POINT}/api/project`)
+  const { data } = await res.json()
+  return data
+}
