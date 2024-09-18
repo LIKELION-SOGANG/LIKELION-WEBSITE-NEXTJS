@@ -3,15 +3,16 @@ import { FAQObj } from '../../../utils/recruitMockData'
 
 interface Items {
   items: FAQObj[]
-  title: string
 }
 
-const FAQItem = ({ items, title }: Items) => {
+const FAQItem = ({ items }: Items) => {
   return (
     <div className="flex flex-col justify-center items-center text-black">
-      <div className="font-pp text-[3.2rem] italic">{title}</div>
+      <div className="font-pp max-tablet:text-[2.4rem] max-desktop:text-[3.2rem] italic">
+        FAQ
+      </div>
       <div className="w-full max-w-[97rem]">
-        {FAQObj.map(element => {
+        {items.map(element => {
           return (
             <div
               key={element.Q}
