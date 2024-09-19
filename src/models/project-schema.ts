@@ -11,4 +11,4 @@ export const ProjectSchema = new Schema({
 })
 
 export const Project =
-  mongoose.models.People ?? mongoose.model('Project', ProjectSchema)
+  mongoose.models.Project ?? mongoose.model('Project', ProjectSchema)
