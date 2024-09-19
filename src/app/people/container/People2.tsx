@@ -134,7 +134,7 @@ export default function SecondSection() {
   return (
     <section>
       <div className="relative w-full bg-white">
-        <div className="flex justify-center items-end">
+        <div className="flex justify-center items-end overflow-hidden">
           <div className="flex justify-end w-[33%]">
             {leftGenerations.map(gen => (
               <div
