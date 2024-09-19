@@ -13,10 +13,7 @@ const Recruit2 = () => {
 
       <AreaItem items={areaObj} />
 
-      <FAQItem
-        items={FAQObj}
-        title="FAQ"
-      />
+      <FAQItem items={FAQObj} />
     </div>
   )
 }

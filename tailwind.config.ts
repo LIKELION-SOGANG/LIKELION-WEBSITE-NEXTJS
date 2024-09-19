@@ -21,7 +21,8 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hackathon-image': 'url("/images/about/hackathon.png")'
       },
       colors: {
         white: '#ffffff',
@@ -36,6 +37,10 @@ const config: Config = {
         infiniteSlide: {
           '0%': { transform: 'translate(0%)' },
           '100%': { transform: 'translate(-100%)' }
+        },
+        infiniteSlide2: {
+          '0%': { transform: 'translate(100%)' },
+          '100%': { transform: 'translate(0%)' }
         },
         scaleLeft: {
           '0%': {
@@ -58,6 +63,9 @@ const config: Config = {
       },
       animation: {
         infiniteSlide: 'infiniteSlide 5s linear infinite forwards',
+        infiniteSlide2: 'infiniteSlide2 5s linear infinite forwards',
+        infiniteSlideOriginal:
+          'infiniteSlideOriginal 5s linear infinite forwards',
         scaleLeft: 'scaleLeft 0.5s ease-in',
         scaleDownCenter: 'scaleDownCenter 0.5s ease-in forwards'
       }
