@@ -2,47 +2,56 @@ import React from 'react'
 
 export default function Contact1() {
   return (
-    <div>
+    <section>
       <div className="relative w-full h-screen overflow-x-hidden overflow-y-hidden">
         <img
           className={`absolute
-            mobile:left-[35vw] w-[53vw] h-[52vw] top-[-20.3vw]
+            left-[42vw] w-[50vw] h-[50vw] top-[-16vw]
+            mobile:left-[35vw] mobile:w-[53vw] mobile:h-[52vw] mobile:top-[-20.3vw]
             tablet:left-[12vw] tablet:w-[34vw] tablet:h-[34vw] tablet:top-[-10vw]
             desktop:left-[12vw] desktop:w-[34vw] desktop:h-[34vw] desktop:top-[-10vw]  
             `}
           src="/images/contact/obj1.png"
+          alt="Object1-chain"
         />
         <img
           className={`absolute 
+            w-[60vw] h-[60vw] mt-40 pt-6 left-[58vw]
             mobile:w-[50vw] mobile:h-[50vw] mobile:mt-40 mobile:pt-6 mobile:left-[65vw]
             tablet:w-[45vw] tablet:h-[43vw] tablet:mt-0 tablet:pt-0 tablet:left-[66vw]
             desktop:w-[45vw] desktop:h-[43vw] desktop:mt-0 desktop:pt-0 desktop:left-[66vw] 
             `}
           src="/images/contact/obj2.png"
+          alt="Object2-cone"
         />
       </div>
-      <div className="text-center desktop:mt-[-24vw] tablet:mt-[-24vw] mobile:mt-[-50vh]">
-        <div className="desktop:text-[6rem] tablet:text-[6rem] mobile:text-[4rem] text-black font-pp font-thin">
+      <div className="text-center mt-[-50vh] mobile:mt-[-50vh] tablet:mt-[-24vw] desktop:mt-[-24vw]">
+        <div className="text-[3.5rem] mobile:text-[4rem] tablet:text-[6rem] desktop:text-[6rem] text-black font-pp font-thin">
           Connect With Us!
         </div>
       </div>
       <div className="relative w-full h-[80vh] overflow-x-hidden overflow-y-hidden">
         <img
           className={`absolute 
-            desktop:left-0 desktop:w-[31vw] desktop:h-[29vw] 
+            left-[-25vw] w-[60vw] h-[60vw] 
+            mobile:left-[-10vw] mobile:w-[35vw] mobile:h-[34vw] 
             tablet:left-0 tablet:w-[31vw] tablet:h-[29vw]
-            mobile:left-[-10vw] mobile:w-[35vw] mobile:h-[34vw] top-[-1vw]`}
+            desktop:left-0 desktop:w-[31vw] desktop:h-[29vw] 
+            top-[3vw]`}
           src="/images/contact/obj3.png"
+          alt="Object3-plate"
         />
         <img
           className={`absolute 
+            w-[77vw] h-[77vw] left-[45vw] top-[55vw]
           desktop:w-[31vw] desktop:h-[32vw] desktop:left-[58vw] desktop:top-[10vw]
           tablet:w-[31vw] tablet:h-[32vw] tablet:left-[58vw] tablet:top-[10vw]
           mobile:w-[70vw] mobile:h-[70vw] mobile:left-[50vw] mobile:top-[40vw] 
           `}
           src="/images/contact/obj4.png"
+          alt="Object4-sphere"
         />
       </div>
-    </div>
+    </section>
   )
 }
