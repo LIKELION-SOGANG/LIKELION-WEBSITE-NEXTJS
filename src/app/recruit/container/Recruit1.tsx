@@ -1,8 +1,18 @@
+'use client'
+
 import React from 'react'
 import ScrollLottie from '../ScrollLottie'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 const Recruit1 = () => {
+  const router = useRouter()
+
+  const onClickApply = () => {
+    console.log('clicked!')
+    router.push('/recruit/apply')
+  }
+
   return (
     <div className="overflow-x-hidden">
       <div className="flex justify-end">
@@ -26,7 +36,9 @@ const Recruit1 = () => {
           Join Us?
         </div>
 
-        <button className="cursor-pointer text-black text-[2rem] p-[1.5rem_3rem] max-tablet:hidden absolute top-[50rem] rounded-[3rem] bg-white">
+        <button
+          onClick={onClickApply}
+          className="cursor-pointer text-black text-[2rem] p-[1.5rem_3rem] max-tablet:hidden absolute top-[50rem] rounded-[3rem] bg-white">
           APLLY NOW
         </button>
 

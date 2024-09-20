@@ -6,7 +6,11 @@ import SelectTimeDay from '../components/SelectTimeDay'
 import SmallInput from '../components/SmallInput'
 import SaveButton from '../components/SaveButton'
 
-const PersonalStatementForm = () => {
+interface PersonalStatementFormProps {
+  onClickStep: () => void
+}
+
+const PersonalStatementForm = ({ onClickStep }: PersonalStatementFormProps) => {
   return (
     <div className="w-[56.2rem] flex flex-col gap-[5rem]">
       <SelectPart />
@@ -29,7 +33,9 @@ const PersonalStatementForm = () => {
 
       <div className="mb-[4.7rem]"></div>
 
-      <SaveButton />
+      <div onClick={onClickStep}>
+        <SaveButton />
+      </div>
     </div>
   )
 }
