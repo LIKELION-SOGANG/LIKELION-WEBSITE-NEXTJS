@@ -16,6 +16,10 @@ const ApplySection = () => {
     setStep(prev => prev + 1)
   }
 
+  const onChangeInput = () => {
+    console.log('not yet')
+  }
+
   return (
     <section className="overflow-x-hidden pt-[2rem] bg-white text-black w-[100vw] h-[100vh]">
       <div className="flex flex-col  items-center h-full">
@@ -45,6 +49,9 @@ const ApplySection = () => {
 
               <div>
                 <SmallInput
+                  onChangeInput={onChangeInput}
+                  name="uniqueNumber"
+                  value=""
                   title="이미 작성하던 지원서가 있으시다면,"
                   placeholder="이메일로 발송된 고유번호를 입력해주세요."
                 />

@@ -1,12 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SmallInput from '../components/SmallInput'
 import Button from '../components/Button'
 import {
   personalInformation,
   personalPhoneNumber
 } from '@/utils/recruitMockData'
-import Progress from '../components/Progress'
-import PersonalStatementForm from './PersonalStatementForm'
 
 interface PersonalStatementFormProps {
   onClickStep: () => void
@@ -15,18 +13,40 @@ interface PersonalStatementFormProps {
 const PersonalInformationForm = ({
   onClickStep
 }: PersonalStatementFormProps) => {
+  const [personalInfo, setPersonalInfo] = useState({
+    name: '',
+    studentNumbder: '',
+    email: '',
+    phone: ''
+  })
+
+  const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(personalInfo)
+    const { name, value } = e.target
+
+    setPersonalInfo(prev => {
+      return { ...prev, [name]: value }
+    })
+  }
+
   return (
     <div className="w-[56.2rem] ">
       <div className="flex flex-col gap-[5rem] mb-[5rem]">
         {personalInformation.map((item, index) => (
           <SmallInput
+            onChangeInput={onChangeInput}
+            name={item.name}
             key={index}
             title={item.title}
+            value={personalInfo[item.name as keyof typeof personalInfo]}
             placeholder={item.placeholder}
           />
         ))}
 
         <SmallInput
+          onChangeInput={onChangeInput}
+          name="phone"
+          value={personalInfo.phone}
           title={personalPhoneNumber.title}
           placeholder={personalPhoneNumber.placeholder}
         />
