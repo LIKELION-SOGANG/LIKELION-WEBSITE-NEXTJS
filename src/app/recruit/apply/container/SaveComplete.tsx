@@ -26,7 +26,7 @@ const SaveComplete = () => {
             홈으로 돌아가기
           </div>
           <div className="cursor-pointer p-[0.6rem_1.3rem] bg-grey text-[#b7b7b7] text-[1.3rem] font-semibold rounded-[2rem]">
-            지원서 수정하기..
+            지원서 수정하기
           </div>
         </div>
       </div>
