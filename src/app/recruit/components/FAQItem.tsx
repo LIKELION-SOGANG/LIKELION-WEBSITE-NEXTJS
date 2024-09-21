@@ -24,9 +24,9 @@ const FAQItem = ({ items }: Items) => {
               <div className="justify-between text-[1.6rem] font-semibold flex items-center">
                 <div className="">{item.Q}</div>
                 <button
+                  aria-label="showing-button"
                   onClick={() =>
                     setOpen(prev => {
-                      console.log(prev)
                       const temp = [...prev]
                       temp[index] = !temp[index]
                       return temp

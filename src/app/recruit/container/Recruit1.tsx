@@ -19,7 +19,7 @@ const Recruit1 = () => {
         <div className="pointer-events-none w-[1270px]  h-[1270px] relative m-[36px_0_150px_200px] max-tablet:ml-0 box-border flex justify-end">
           <div className="w-[1270px] h-[1270px] // max-tablet:right-[-50rem] max-mobile:right-[-62.5rem] max-desktop:right-[-20rem] // max-tablet:top-[-10rem] //  absolute -z-10 flex justify-center">
             <Image
-              src="/images/about/obj2.png"
+              src="/images/recruit/obj2.webp"
               alt="Background Image"
               layout="fill"
               objectFit="cover"
