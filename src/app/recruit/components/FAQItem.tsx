@@ -36,7 +36,8 @@ const FAQItem = ({ items }: Items) => {
                   <ArrowLink />
                 </button>
               </div>
-              <div className="mt-[1.4rem] font-medium text-[1.6rem] whitespace-pre-line">
+              <div
+                className={`${open[index] ? 'max-h-[5rem] mt-[1.4rem]' : 'max-h-0 mt-0'} overflow-hidden transition-all ease-in-out font-medium text-[1.6rem] whitespace-pre-line`}>
                 {item.A}
               </div>
             </div>
