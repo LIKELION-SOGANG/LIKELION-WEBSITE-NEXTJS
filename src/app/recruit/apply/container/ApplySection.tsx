@@ -32,7 +32,7 @@ const ApplySection = () => {
 
           {step === 0 ? (
             <div>
-              <div className="mb-[13rem]"></div>
+              <div className="mb-[16rem]"></div>
 
               <div>
                 <div className="text-[1.6rem] font-medium mb-[1.2rem]">
