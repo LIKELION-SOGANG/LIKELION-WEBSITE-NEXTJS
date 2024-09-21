@@ -10,6 +10,11 @@ interface PersonalStatementFormProps {
   onClickStep: () => void
 }
 
+// 해야할 것
+// 1. 미입력시 예외 처리
+// 2. 이메일로 고유번호 발송
+// 3. 정상 입력 후 버튼 클릭시 데이터 페칭, 다음으로 넘어가기
+
 const PersonalInformationForm = ({
   onClickStep
 }: PersonalStatementFormProps) => {

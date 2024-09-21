@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Button from '../components/Button'
 import SmallInput from '../components/SmallInput'
 import ApplyHeader from '../components/ApplyHeader'
@@ -8,6 +8,9 @@ import PersonalInformationForm from './PersonalInformationForm'
 import PersonalStatementForm from './PersonalStatementForm'
 import Progress from '../components/Progress'
 import SaveComplete from './SaveComplete'
+
+// 해야할 것
+// 1. 고유 번호 입력 처리
 
 const ApplySection = () => {
   const [step, setStep] = useState(0)
@@ -29,7 +32,7 @@ const ApplySection = () => {
 
           {step === 0 ? (
             <div>
-              <div className="mb-[19rem]"></div>
+              <div className="mb-[13rem]"></div>
 
               <div>
                 <div className="text-[1.6rem] font-medium mb-[1.2rem]">
