@@ -47,15 +47,15 @@ const Recruit1 = ({ setPcOnly }: Recruit1Props) => {
           APLLY NOW
         </button>
 
-        <div className="tablet:hidden absolute w-[10rem] h-[10rem] top-[45.4rem] right-[2.5rem] rounded-full bg-white flex items-center justify-center">
-          <button
-            onClick={() =>
-              setPcOnly(prev => {
-                return !prev
-              })
-            }
-            className="text-black text-[1.6rem] text-center whitespace-pre-line">{`APLLY\nNOW`}</button>
-        </div>
+        <button
+          onClick={() =>
+            setPcOnly(prev => {
+              return !prev
+            })
+          }
+          className="tablet:hidden absolute w-[10rem] h-[10rem] top-[45.4rem] right-[2.5rem] rounded-full bg-white flex items-center justify-center">
+          <div className="text-black text-[1.6rem] text-center whitespace-pre-line">{`APLLY\nNOW`}</div>
+        </button>
         <div className="absolute top-[75rem]">
           <ScrollLottie />
         </div>
