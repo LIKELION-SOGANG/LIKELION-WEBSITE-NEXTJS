@@ -1,11 +1,16 @@
 'use client'
 
-import React from 'react'
-import ScrollLottie from '../ScrollLottie'
+import React, { useState } from 'react'
+import ScrollLottie from '../components/ScrollLottie'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import PcOnly from './PcOnly'
 
-const Recruit1 = () => {
+interface Recruit1Props {
+  setPcOnly: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const Recruit1 = ({ setPcOnly }: Recruit1Props) => {
   const router = useRouter()
 
   const onClickApply = () => {
@@ -42,8 +47,14 @@ const Recruit1 = () => {
           APLLY NOW
         </button>
 
-        <div className="tablet:hidden absolute w-[10rem] h-[10rem] top-[45.4rem] -z-10 right-[2.5rem] rounded-full bg-white flex items-center justify-center">
-          <div className="text-black text-[1.6rem] text-center whitespace-pre-line">{`APLLY\nNOW`}</div>
+        <div className="tablet:hidden absolute w-[10rem] h-[10rem] top-[45.4rem] right-[2.5rem] rounded-full bg-white flex items-center justify-center">
+          <button
+            onClick={() =>
+              setPcOnly(prev => {
+                return !prev
+              })
+            }
+            className="text-black text-[1.6rem] text-center whitespace-pre-line">{`APLLY\nNOW`}</button>
         </div>
         <div className="absolute top-[75rem]">
           <ScrollLottie />

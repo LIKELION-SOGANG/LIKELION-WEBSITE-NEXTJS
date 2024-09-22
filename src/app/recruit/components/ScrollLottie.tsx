@@ -1,7 +1,7 @@
 import React from 'react'
 import Lottie from 'lottie-react'
-import ScrollAnimationInDesktop from '../../../public/lottie/animationDesktop.json'
-import ScrollAnimationInMobile from '../../../public/lottie/animationMobile.json'
+import ScrollAnimationInDesktop from '../../../../public/lottie/animationDesktop.json'
+import ScrollAnimationInMobile from '../../../../public/lottie/animationMobile.json'
 
 const ScrollLottie = () => {
   return (
