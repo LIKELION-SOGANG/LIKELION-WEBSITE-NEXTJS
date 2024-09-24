@@ -1,4 +1,15 @@
-import { Project } from './mockData'
+import { ProjectSchema } from './../../../../models/project-schema';
+
+export type Project = {
+  _id: number
+  generation: number
+  description:string
+  github:string
+  imageUrl: string
+  member: string
+  project: string
+  team: string
+}
 
 export default function chunkArray(
   array: Project[],

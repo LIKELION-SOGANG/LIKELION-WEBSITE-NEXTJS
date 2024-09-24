@@ -1,11 +1,14 @@
-import chunkArray from '../utils/chunkArray'
-import { projectList, tabList } from '../utils/mockData'
+import { GET } from '@/app/api/project/route'
+import chunkArray, { Project } from '../utils/chunkArray'
+import { tabList } from '../utils/mockData'
 import ProjectItem from './ProjectItem'
 import TapBtn from './TapBtn'
+import { getAllProjects } from '@/client-api/api'
 
-export default function PageContent() {
+export default async function PageContent() {
+  const projectList= await getAllProjects();
   const slicedProjectList = chunkArray(projectList, 3)
-
+  
   return (
     <>
       <div className="hidden tablet:block w-full">
@@ -25,7 +28,7 @@ export default function PageContent() {
               className={`w-full flex gap-10  ${index % 2 === 0 ? '' : 'justify-end'}`}>
               {innerList.map(project => (
                 <ProjectItem
-                  key={project.id}
+                  key={project._id}
                   {...project}
                 />
               ))}
@@ -47,9 +50,9 @@ export default function PageContent() {
               ))}
           </div>
           <div className="flex flex-col flex-1">
-            {projectList.map(project => (
+            {projectList.map((project: Project) => (
               <ProjectItem
-                key={project.id}
+                key={project._id}
                 {...project}
               />
             ))}
