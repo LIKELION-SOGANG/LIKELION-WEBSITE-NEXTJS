@@ -59,7 +59,7 @@ export default function PageContent({
         </div>
       </div>
       <div className="block tablet:hidden w-screen min-h-screen bg-black">
-        <div className="px-[30px] pt-[126px] flex gap-[20px] h-full">
+        <div className="px-[30px] pt-[126px] flex gap-[20px] w-full h-full">
           <div className="sticky left-0 top-[126px] h-[calc(100vh-126px)] flex flex-col gap-[24px] pr-[20px] border-solid border-0 border-r border-[#B7B7B7]">
             {tabList
               .slice(0)
@@ -73,8 +73,8 @@ export default function PageContent({
                 />
               ))}
           </div>
-          <div className="flex flex-col flex-1">
-            {projectList.map((project, index) => (
+          <div className="flex flex-col  w-[calc(65vw)]">
+            {currentList.map((project, index) => (
               <ProjectItem
                 key={index}
                 {...project}
