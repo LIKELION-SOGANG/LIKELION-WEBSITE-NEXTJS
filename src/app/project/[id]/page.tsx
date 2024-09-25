@@ -10,6 +10,8 @@ interface Props {
 }
 
 export default function ModalPage(props: Props) {
+  console.log(props);
+  
   return props.params.id ? (
     <div>
       <div className="tablet:block hidden">

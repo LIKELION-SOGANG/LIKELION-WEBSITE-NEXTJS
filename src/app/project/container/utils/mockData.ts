@@ -13,15 +13,6 @@ export type MockProject = {
   imgUrl: string
 }
 
-export const tabList = [
-  { text: '6th', isSelected: false },
-  { text: '7th', isSelected: false },
-  { text: '8th', isSelected: false },
-  { text: '9th', isSelected: false },
-  { text: '10th', isSelected: false },
-  { text: '11th', isSelected: true }
-]
-
 export const projectList: MockProject[] = [
   {
     id: 1,

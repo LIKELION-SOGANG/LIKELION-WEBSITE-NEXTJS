@@ -1,19 +1,22 @@
 import React from 'react'
-import TapBtn from './container/components/TapBtn'
+import TapBtn from './container/components/TabBtn'
 import Image from 'next/image'
 import PageTitle from './container/components/PageTitle'
 import PageContent from './container/components/PageContent'
+import { getAllProjects } from '@/client-api/api'
 
-export default function ProjectLayout({
+export default async function ProjectLayout({
   children
 }: {
   children: React.ReactNode
 }) {
+  const projectList = await getAllProjects()
+
   return (
     <>
       <div className="tablet:mt-64 w-full flex flex-col items-center px-[64px]">
         <PageTitle />
-        <PageContent />
+        <PageContent projectList={projectList} />
       </div>
       <Image
         src="/images/project/bg.png"
