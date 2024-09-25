@@ -13,7 +13,7 @@ export default function ProjectItem(props: Project) {
       </span>
       <span className="text-[13px] tablet:text-[16px] font-medium mb-[8px] tablet:mb-[17px]">
         {props.generation
-          ? `${props.generation} | ${props.generation + 2012}`
+          ? `${props.generation}th | ${props.generation + 2012}`
           : null}
       </span>
       <Image
