@@ -5,7 +5,7 @@ import mockImage4 from '../mockImage/mockImg4.png'
 import mockImage5 from '../mockImage/mockImg5.png'
 import mockImage6 from '../mockImage/mockImg6.png'
 
-export type Project = {
+export type MockProject = {
   id: number
   title: string
   generation: string
@@ -13,16 +13,7 @@ export type Project = {
   imgUrl: string
 }
 
-export const tabList = [
-  { text: '6th', isSelected: false },
-  { text: '7th', isSelected: false },
-  { text: '8th', isSelected: false },
-  { text: '9th', isSelected: false },
-  { text: '10th', isSelected: false },
-  { text: '11th', isSelected: true }
-]
-
-export const projectList: Project[] = [
+export const projectList: MockProject[] = [
   {
     id: 1,
     title: 'YouCheck',

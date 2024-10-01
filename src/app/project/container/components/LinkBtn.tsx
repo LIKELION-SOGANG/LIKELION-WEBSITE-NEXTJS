@@ -6,7 +6,7 @@ export default function LinkBtn({ url }: { url: string }) {
       <Link
         href={url}
         target="_blank"
-        className="rounded-2xl border border-solid border-[rgba(0,0,0,0.25)] py-[12px]  text-[20px] flex items-center justify-center w-[calc(100%-60px)] absolute bottom-[34px]">
+        className="rounded-2xl border border-solid border-[rgba(0,0,0,0.25)] py-[12px]  text-[20px] flex items-center justify-center w-full">
         <Image
           src="/icon/button/link.svg"
           alt="Link icon"

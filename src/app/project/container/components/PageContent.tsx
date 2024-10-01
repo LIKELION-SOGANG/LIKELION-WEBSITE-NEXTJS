@@ -1,10 +1,33 @@
-import chunkArray from '../utils/chunkArray'
-import { projectList, tabList } from '../utils/mockData'
-import ProjectItem from './ProjectItem'
-import TapBtn from './TapBtn'
+'use client'
 
-export default function PageContent() {
-  const slicedProjectList = chunkArray(projectList, 3)
+import { useEffect, useState } from 'react'
+import chunkArray from '../utils/chunkArray'
+import ProjectItem from './ProjectItem'
+import TabBtn from './TabBtn'
+import { Project } from '@/type/project'
+
+const tabList = [6, 7, 8, 9, 10, 11, 12]
+
+export default function PageContent({
+  projectList
+}: {
+  projectList: Project[]
+}) {
+  const [currentTab, setCurrentTab] = useState(11)
+  const [currentList, setCurrentList] = useState(
+    projectList.filter(project => project.generation === 11)
+  )
+  useEffect(() => {
+    setCurrentList(
+      projectList.filter(project => project.generation === currentTab)
+    )
+  }, [currentTab, projectList])
+
+  const slicedProjectList = chunkArray(currentList, 3)
+
+  const onClickTab = (generation: number) => {
+    setCurrentTab(generation)
+  }
 
   return (
     <>
@@ -12,9 +35,11 @@ export default function PageContent() {
         <div className="w-full flex flex-col items-center"></div>
         <div className="flex gap-[7px] justify-center ">
           {tabList.map(tab => (
-            <TapBtn
-              key={tab.text}
-              {...tab}
+            <TabBtn
+              key={tab}
+              generation={tab}
+              isSelected={tab === currentTab}
+              onClickTab={onClickTab}
             />
           ))}
         </div>
@@ -22,10 +47,10 @@ export default function PageContent() {
           {slicedProjectList.map((innerList, index) => (
             <div
               key={index}
-              className={`w-full flex gap-10  ${index % 2 === 0 ? '' : 'justify-end'}`}>
-              {innerList.map(project => (
+              className={`w-full h-[calc(18vw)] flex gap-10 mb-[calc(7vw)]  ${index % 2 === 0 ? '' : 'justify-end'}`}>
+              {innerList.map((project, index) => (
                 <ProjectItem
-                  key={project.id}
+                  key={index}
                   {...project}
                 />
               ))}
@@ -34,22 +59,24 @@ export default function PageContent() {
         </div>
       </div>
       <div className="block tablet:hidden w-screen min-h-screen bg-black">
-        <div className="px-[30px] pt-[126px] flex gap-[20px] h-full">
+        <div className="px-[30px] pt-[126px] flex gap-[20px] w-full h-full">
           <div className="sticky left-0 top-[126px] h-[calc(100vh-126px)] flex flex-col gap-[24px] pr-[20px] border-solid border-0 border-r border-[#B7B7B7]">
             {tabList
               .slice(0)
               .reverse()
               .map(tab => (
-                <TapBtn
-                  key={tab.text}
-                  {...tab}
+                <TabBtn
+                  key={tab}
+                  generation={tab}
+                  isSelected={tab === currentTab}
+                  onClickTab={onClickTab}
                 />
               ))}
           </div>
-          <div className="flex flex-col flex-1">
-            {projectList.map(project => (
+          <div className="flex flex-col  w-[calc(65vw)]">
+            {currentList.map((project, index) => (
               <ProjectItem
-                key={project.id}
+                key={index}
                 {...project}
               />
             ))}
