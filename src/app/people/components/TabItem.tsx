@@ -1,32 +1,18 @@
 import React from 'react'
 import Image from 'next/image'
-
-interface AdultLion {
-  id: number
+interface Member {
+  _id: string
   name: string
-  emoji: string
-  part: string
-  is_president: boolean
-  is_vice_president: boolean
+  generation: string
+  type: string
 }
-interface BabyLion {
-  id: number
-  name: string
-}
-interface MemberData {
-  mockAdultLion: AdultLion[]
-  mockBabyLion: BabyLion[]
-  mockGeneration: string
-}
-
 interface TabItemProps {
-  data: MemberData[]
+  data: Member[]
 }
 
 export default function TabItem({ data }: TabItemProps) {
-  const adult_lion = data[0].mockAdultLion
-  const baby_lion = data[0].mockBabyLion
-  const generation = data[0].mockGeneration
+  const adult_lion = data.filter((member: Member) => member.type !== 'general')
+  const baby_lion = data.filter((member: Member) => member.type === 'general')
 
   return (
     <div>
@@ -41,10 +27,11 @@ export default function TabItem({ data }: TabItemProps) {
         <div className="flex justify-start items-center text-black whitespace-nowrap mx-[4rem]">
           {adult_lion?.map(member => (
             <div
-              key={member.id}
+              key={member._id}
               className="flex flex-col justify-center items-center w-[16vw] min-w-[12rem] tablet:min-w-[18rem] h-auto mx-4">
               <Image
-                src={member.emoji}
+                // src={member.emoji}
+                src={''}
                 width={160}
                 height={160}
                 className="block object-contain w-[10rem] h-[10rem] tablet:w-[16rem] tablet:h-[16rem] mb-8"
@@ -54,11 +41,11 @@ export default function TabItem({ data }: TabItemProps) {
                 {member.name}
               </div>
               <div className="font-pretendard text-[1.2rem] tablet:text-[1.4rem] font-medium">
-                {generation} / {member.part}
+                {/* {member.generation} / {member.part} */}
               </div>
-              {member.is_president ? (
+              {member.type === 'president' ? (
                 <div className="mt-[0.4rem] font-semibold">대표</div>
-              ) : member.is_vice_president ? (
+              ) : member.type === 'vice_president' ? (
                 <div className="mt-[0.4rem] font-semibold">부대표</div>
               ) : (
                 <div className="mt-[2.0rem] font-semibold"></div>
@@ -80,7 +67,7 @@ export default function TabItem({ data }: TabItemProps) {
         {baby_lion?.length > 0 ? (
           baby_lion.map(member => (
             <div
-              key={member.id}
+              key={member._id}
               className="font-pretendard text-[1.4rem] text-center tablet:text-[2rem] font-medium min-w-[4rem] tablet:min-w-[5rem]">
               {member.name}
             </div>

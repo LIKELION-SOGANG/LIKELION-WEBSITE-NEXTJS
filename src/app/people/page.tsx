@@ -4,11 +4,12 @@ import People2 from './container/People2'
 import { getAllMembers } from '@/client-api/api'
 
 export default async function PeoplePage() {
-  const members = await getAllMembers()
+  const data = await getAllMembers()
+
   return (
     <main>
       <People1 />
-      <People2 />
+      <People2 Members={data} />
     </main>
   )
 }
