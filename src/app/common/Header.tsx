@@ -1,12 +1,37 @@
 'use client'
 import Link from 'next/link'
-import React from 'react'
-//
-//
-//
+import React, { useState, useEffect } from 'react'
+
 function Header() {
+  const [isShowHeader, setIsShowHeader] = useState(true) // 헤더 표시 여부
+  const [lastScrollY, setLastScrollY] = useState(0) // 마지막 스크롤 위치
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== 'undefined') {
+        const currentScrollY = window.scrollY
+        if (currentScrollY > lastScrollY) {
+          setIsShowHeader(false)
+        } else {
+          setIsShowHeader(true)
+        }
+        setLastScrollY(currentScrollY)
+      }
+    }
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll)
+      return () => {
+        window.removeEventListener('scroll', handleScroll)
+      }
+    }
+  }, [lastScrollY])
+
   return (
-    <header className="text-white mix-blend-difference w-full flex fixed top-0 p-[2.5rem]">
+    <header
+      className={`text-white mix-blend-difference w-full flex fixed top-0 p-[2.5rem] z-[999] transition-transform duration-500 ${
+        isShowHeader ? 'translate-y-0' : '-translate-y-full'
+      }`}>
       <div className="font-pp cursor-pointer text-HeaderPC">
         Like<span className="italic">lion</span> So
         <span className="italic">gang</span>
