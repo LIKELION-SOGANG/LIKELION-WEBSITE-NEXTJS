@@ -1,11 +1,11 @@
+import { ScheduleObj } from '@/utils/recruitMockData'
 import React from 'react'
-import { AreaObj, ScheduleObj } from '../../utils/recruitMockData'
 
 interface Items {
   items: ScheduleObj[]
 }
 
-const ScheduleItem = ({ items }: Items) => {
+export default function ScheduleItem({ items }: Items) {
   return (
     <div className="flex flex-col justify-center items-center text-black mb-[12rem]  max-tablet:mb-[12.7rem]">
       <div className="font-pp max-tablet:text-[2.4rem] max-desktop:text-[3.2rem] italic mb-[3.8rem]">
@@ -28,5 +28,3 @@ const ScheduleItem = ({ items }: Items) => {
     </div>
   )
 }
-
-export default ScheduleItem

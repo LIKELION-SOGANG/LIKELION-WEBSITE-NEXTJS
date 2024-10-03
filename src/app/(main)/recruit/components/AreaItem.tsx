@@ -1,9 +1,14 @@
+import { AreaObj } from '@/utils/recruitMockData'
 import React from 'react'
-import { AreaObj } from '../../../utils/recruitMockData'
-
+//
+//
+//
 interface Items {
   items: AreaObj[]
 }
+//
+//
+//
 
 const AreaItem = ({ items }: Items) => {
   return (

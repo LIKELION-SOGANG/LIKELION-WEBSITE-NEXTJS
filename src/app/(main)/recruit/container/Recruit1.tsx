@@ -1,5 +1,5 @@
 import React from 'react'
-import ScrollLottie from '../ScrollLottie'
+import ScrollLottie from '../components/ScrollLottie'
 
 const Recruit1 = () => {
   return (

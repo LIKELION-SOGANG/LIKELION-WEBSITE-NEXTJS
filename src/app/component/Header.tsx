@@ -49,8 +49,10 @@ function Header() {
           isShowHeader ? 'translate-y-0' : '-translate-y-full'
         }`}>
         <div className="font-pp cursor-pointer text-HeaderPC">
-          Like<span className="italic">lion</span> So
-          <span className="italic">gang</span>
+          <Link href="/">
+            Like<span className="italic">lion</span> So
+            <span className="italic">gang</span>
+          </Link>
         </div>
         <nav className="ml-auto hidden tablet:flex gap-[1.5rem]">
           <Link
