@@ -52,7 +52,7 @@ export default function Onboard2() {
             했습니다.
           </div>
         </div>
-        <div className="text-black flex flex-col items-center flex mobile:hidden">
+        <div className="text-black flex flex-col items-center mobile:hidden">
           <div className="text-2xl">WE ARE</div>
           <div className="font-pp cursor-pointer text-6xl">
             Like<span className="italic">lion</span> So

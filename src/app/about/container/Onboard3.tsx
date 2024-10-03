@@ -1,9 +1,10 @@
+import { ONBOARD } from '@/style/zIndex'
 import Link from 'next/link'
 import React from 'react'
 
 export default function Onboard3() {
   return (
-    <section>
+    <section className={`relative z-[${ONBOARD}]`}>
       <div className="w-full h-[80vh] bg-black text-white flex flex-col justify-center items-center">
         <div className="font-pp cursor-pointer text-6xl mobile:text-8xl">
           Like<span className="italic">lion</span> So
@@ -54,7 +55,7 @@ export default function Onboard3() {
         </div>
       </div>
       <div className="w-full h-screen flex items-center bg-black text-white">
-        <div className="tablet:relative w-full h-auto flex flex-col tablet:flex-row items-end">
+        <div className="tablet:relative w-full h-auto flex flex-col tablet:flex-row items-end]">
           <img
             className="h-[40rem] w-full tablet:w-1/2 tablet:h-auto"
             src="images/about/hackathon.png"
