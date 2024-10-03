@@ -1,10 +1,9 @@
-import { ONBOARD } from '@/style/zIndex'
 import Link from 'next/link'
 import React from 'react'
 
 export default function Onboard3() {
   return (
-    <section className={`relative z-[${ONBOARD}]`}>
+    <section>
       <div className="w-full h-[80vh] bg-black text-white flex flex-col justify-center items-center">
         <div className="font-pp cursor-pointer text-6xl mobile:text-8xl">
           Like<span className="italic">lion</span> So
@@ -14,7 +13,7 @@ export default function Onboard3() {
       </div>
       <div className="text-2xl mobile:text-4xl w-full h-[75vh] bg-black text-white flex flex-col justify-center items-center">
         <div>
-          <span className="font-pp text-[20rem] font-light italic tablet:not-italic tablet:font-normal">
+          <span className="font-pp text-[20rem] font-light tablet:font-normal">
             9
           </span>
           <span className="font-medium">년</span>
@@ -26,9 +25,7 @@ export default function Onboard3() {
       </div>
       <div className="text-2xl mobile:text-4xl w-full h-[75vh] bg-black text-white flex flex-col justify-center items-center">
         <div className="relative">
-          <span className="font-pp text-[18rem] font-light italic tablet:not-italic tablet:font-normal">
-            100
-          </span>
+          <span className="font-pp text-[18rem] font-light ">100</span>
           <span className="text-[4rem] tablet:text-[8rem] font-thin absolute -top-40">
             +
           </span>
@@ -42,9 +39,7 @@ export default function Onboard3() {
       </div>
       <div className="text-2xl mobile:text-4xl w-full h-[75vh] bg-black text-white flex flex-col justify-center items-center">
         <div className="relative">
-          <span className="font-pp text-[18rem] font-light italic tablet:not-italic tablet:font-normal">
-            120
-          </span>
+          <span className="font-pp text-[18rem] font-light">120</span>
           <span className="text-[4rem] tablet:text-[8rem] font-thin absolute -top-40">
             +
           </span>

@@ -57,6 +57,9 @@ function Header() {
         <nav className="ml-auto hidden tablet:flex gap-[1.5rem]">
           <Link
             href={'/about'}
+            onClick={() => {
+              setIsShowMobileMenu(false)
+            }}
             className="font-pp italic text-HeaderPC p-[0.5rem]">
             About
           </Link>

@@ -19,7 +19,7 @@ export default function Onboard1() {
           src="images/about/obj3.png"
           alt="object"
         />
-        <div className="font-pp text-[28vw] flex items-end flex items-end absolute top-[25vh] right-[50%] translate-x-[50%]">
+        <div className="font-pp text-[28vw] flex items-end absolute top-[25vh] right-[50%] translate-x-[50%]">
           <span>Like</span>
           <span className="italic">lion</span>
         </div>

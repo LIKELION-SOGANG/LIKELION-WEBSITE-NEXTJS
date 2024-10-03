@@ -33,7 +33,7 @@ export default function Onboard2() {
         </div>
       </div>
       <div className="flex justify-center items-center w-full h-screen bg-white">
-        <div className="text-black flex flex-col items-center hidden mobile:flex">
+        <div className="text-black flex flex-col items-center mobile:flex">
           <div className="text-4xl">WE ARE</div>
           <div className="font-pp cursor-pointer text-8xl">
             Like<span className="italic">lion</span> So
