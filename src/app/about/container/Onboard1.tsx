@@ -1,9 +1,8 @@
-import { ONBOARD } from '@/style/zIndex'
 import React from 'react'
 
 export default function Onboard1() {
   return (
-    <section className={`relative z-[${ONBOARD}]`}>
+    <section>
       <div className="text-white w-full h-[100vh] bg-black">
         <img
           className="absolute top-0 origin-top-left scale-[.45] blur-[10px]"
