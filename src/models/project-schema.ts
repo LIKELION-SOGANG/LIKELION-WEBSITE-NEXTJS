@@ -2,6 +2,7 @@ import mongoose, { Schema } from 'mongoose'
 
 export const ProjectSchema = new Schema({
   _id: String,
+  generation: Number,
   description: String,
   github: String,
   imageUrl: String,

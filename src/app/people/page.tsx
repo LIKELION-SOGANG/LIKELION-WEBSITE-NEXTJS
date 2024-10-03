@@ -5,7 +5,6 @@ import { getAllMembers } from '@/client-api/api'
 
 export default async function PeoplePage() {
   const data = await getAllMembers()
-
   return (
     <main>
       <People1 />

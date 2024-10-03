@@ -24,7 +24,7 @@ export default async function ProjectLayout({
         height={0}
         className="w-full h-auto fixed top-1/3 tablet:top-0 left-0 blur-xl -z-20 scale-[2.5] tablet:scale-125"
       />
-        {children}
+      {children}
     </>
   )
 }
