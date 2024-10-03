@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react'
 //
 //
 
-function Header() {
+export default function Header() {
   const [isShowHeader, setIsShowHeader] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false)
@@ -147,5 +147,3 @@ function Header() {
     </>
   )
 }
-
-export default Header
