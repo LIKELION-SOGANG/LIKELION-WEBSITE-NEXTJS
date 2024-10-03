@@ -84,12 +84,40 @@ function Header() {
         </button>
       </header>
       {/* 메뉴 리스트 */}
-      {isShowMobileMenu && (
-        <section
-          className={`fixed top-0 left-0 w-full h-[100vh] bg-black z-${HEADER} transform transition-transform duration-500 ${
-            isShowMobileMenu ? 'translate-y-0' : '-translate-y-full'
-          }`}></section>
-      )}
+      <section
+        className={`fixed top-0 w-full h-[100vh] bg-black z-${HEADER} transform transition-transform duration-500 ${
+          isShowMobileMenu ? 'translate-y-0' : '-translate-y-full'
+        }`}>
+        <nav>
+          <ul className="font-pp text-[3.2rem] font-[300]">
+            <Link
+              href="/about"
+              className="px-[3rem] py-[1.1rem] block">
+              About
+            </Link>
+            <Link
+              href="/people"
+              className="px-[3rem] py-[1.1rem] block">
+              People
+            </Link>
+            <Link
+              href="/project "
+              className="px-[3rem] py-[1.1rem] block">
+              Project
+            </Link>
+            <Link
+              href="/recruit"
+              className="px-[3rem] py-[1.1rem] block">
+              Recruit
+            </Link>
+            <Link
+              href="/contact"
+              className="px-[3rem] py-[1.1rem] block">
+              Contact
+            </Link>
+          </ul>
+        </nav>
+      </section>
     </>
   )
 }

@@ -35,12 +35,12 @@ export const Pp = localFont({
   src: [
     {
       path: '../../public/font/pp-ultra-light.otf',
-      weight: '300',
-      style: 'italic'
+      weight: '300'
     },
     {
       path: '../../public/font/pp-ultra-lightitalic.otf',
-      weight: '300'
+      weight: '300',
+      style: 'italic'
     },
     {
       path: '../../public/font/pp-regular.otf',

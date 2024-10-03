@@ -59,8 +59,8 @@ export default function Onboard2() {
             <span className="italic">gang</span>
           </div>
           <div className="mt-32 text-center text-[1.4rem]">
-            멋쟁이사자처럼 서강대학교는 대면 교육 세션, 데모데이 등<br />{' '}
-            다채로운 활동을 통해 매년 구성원들의{' '}
+            멋쟁이사자처럼 서강대학교는 대면 교육 세션, 데모데이 등<br />
+            다채로운 활동을 통해 매년 구성원들의
             <span className="font-black">폭발적인 성장</span>을 이끌어내고
             <br />
             있습니다. 그 성과로, 대학생 1500명이 참여한 작년 ‘멋쟁이사자처럼
