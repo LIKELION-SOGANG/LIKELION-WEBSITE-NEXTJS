@@ -7,7 +7,9 @@ import { PAGE } from '@/style/zIndex'
 //
 export default function RecruitPage() {
   return (
-    <main className={`relative z-[${PAGE}]`}>
+    <main
+      className={`relative`}
+      style={{ zIndex: PAGE }}>
       <Recruit1 />
       <Recruit2 />
     </main>

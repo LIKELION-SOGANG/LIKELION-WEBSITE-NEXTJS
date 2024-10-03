@@ -7,7 +7,9 @@ import { PAGE } from '@/style/zIndex'
 export default async function PeoplePage() {
   const data = await getAllMembers()
   return (
-    <main className={`relative z-[${PAGE}]`}>
+    <main
+      className={`relative`}
+      style={{ zIndex: PAGE }}>
       <People1 />
       <People2 Members={data} />
     </main>

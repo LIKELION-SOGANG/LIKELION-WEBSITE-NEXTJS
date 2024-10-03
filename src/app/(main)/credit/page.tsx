@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { PAGE } from '@/style/zIndex'
 
 export default function CreditPage() {
   return (
-    <main>
+    <main
+      className={`relative`}
+      style={{ zIndex: PAGE }}>
       <div className="bg-black w-full h-full">
         <div className="flex flex-col justify-center font-pp text-white">
           <h3

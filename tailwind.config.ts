@@ -1,3 +1,4 @@
+import { HEADER, MOBILE_MENU_LIST } from '@/style/zIndex'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {

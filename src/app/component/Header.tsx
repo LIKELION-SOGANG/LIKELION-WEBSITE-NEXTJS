@@ -1,5 +1,5 @@
 'use client'
-import { HEADER } from '@/style/zIndex'
+import { HEADER, MOBILE_MENU_LIST } from '@/style/zIndex'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
@@ -45,9 +45,10 @@ function Header() {
   return (
     <>
       <header
-        className={`text-white mix-blend-difference w-full flex fixed top-0 p-[2.5rem] z-${HEADER} transition-transform duration-500 ${
+        className={`text-white mix-blend-difference w-full flex fixed top-0 p-[2.5rem] transition-transform duration-500 ${
           isShowHeader ? 'translate-y-0' : '-translate-y-full'
-        }`}>
+        }`}
+        style={{ zIndex: HEADER }}>
         <div className="font-pp cursor-pointer text-HeaderPC">
           <Link href="/">
             Like<span className="italic">lion</span> So
@@ -99,9 +100,10 @@ function Header() {
       </header>
       {/* 모바일 메뉴 리스트 - on/off*/}
       <section
-        className={`fixed top-0 w-full h-[100vh] bg-black z-${HEADER} pt-[5rem] transform transition-transform duration-500 ${
+        className={`fixed top-0 w-full h-[100vh] bg-black pt-[5rem] transform transition-transform duration-500 ${
           isShowMobileMenu ? 'translate-y-0' : '-translate-y-full'
-        }`}>
+        }`}
+        style={{ zIndex: MOBILE_MENU_LIST }}>
         <button
           onClick={handleMobileCloseMenuClick}
           className="absolute top-[2rem] right-[1.5rem] p-[1rem]">

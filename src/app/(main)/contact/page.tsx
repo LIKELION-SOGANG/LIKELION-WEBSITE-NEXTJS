@@ -5,7 +5,9 @@ import { PAGE } from '@/style/zIndex'
 
 export default function ContactPage() {
   return (
-    <main className={`relative z-[${PAGE}]`}>
+    <main
+      className={`relative`}
+      style={{ zIndex: PAGE }}>
       <div className="bg-white">
         <Contact1 />
         <Contact2 />

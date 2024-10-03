@@ -13,7 +13,9 @@ export default async function ProjectLayout({
   const projectList = await getAllProjects()
 
   return (
-    <main className={`relative z-[${PAGE}]`}>
+    <main
+      className={`relative`}
+      style={{ zIndex: PAGE }}>
       <div className="tablet:mt-64 w-full flex flex-col items-center px-[64px]">
         <PageTitle />
         <PageContent projectList={projectList} />

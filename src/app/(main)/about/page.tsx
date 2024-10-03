@@ -8,7 +8,9 @@ import { PAGE } from '@/style/zIndex'
 
 export default function AboutPage() {
   return (
-    <main className={`relative z-[${PAGE}]`}>
+    <main
+      className={`relative`}
+      style={{ zIndex: PAGE }}>
       <Onboard1 />
       <Onboard2 />
       <Onboard3 />
