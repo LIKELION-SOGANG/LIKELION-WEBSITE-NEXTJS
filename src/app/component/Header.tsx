@@ -3,6 +3,7 @@ import { HEADER, MOBILE_MENU_LIST } from '@/style/zIndex'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
+import { useLockBodyScroll } from 'react-use'
 
 //
 //
@@ -12,6 +13,7 @@ export default function Header() {
   const [isShowHeader, setIsShowHeader] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false)
+  useLockBodyScroll(isShowMobileMenu)
 
   const handleMobileHamburgerClick = () => {
     setIsShowMobileMenu(true)
