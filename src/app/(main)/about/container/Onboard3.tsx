@@ -50,7 +50,7 @@ export default function Onboard3() {
         </div>
       </div>
       <div className="w-full h-screen flex items-center bg-black text-white">
-        <div className="tablet:relative w-full h-auto flex flex-col tablet:flex-row items-end]">
+        <div className="tablet:relative w-full h-auto flex flex-col tablet:flex-row items-end">
           <img
             className="h-[40rem] w-full tablet:w-1/2 tablet:h-auto"
             src="images/about/hackathon.png"
