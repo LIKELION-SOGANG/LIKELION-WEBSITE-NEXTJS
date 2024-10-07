@@ -8,7 +8,7 @@ interface Items {
 const FAQItem = ({ items }: Items) => {
   return (
     <div className="flex flex-col justify-center items-center text-black">
-      <div className="font-pp max-tablet:text-[2.4rem] max-desktop:text-[3.2rem] italic">
+      <div className="font-pp text-[2.4rem] tablet:text-[3.2rem] italic">
         FAQ
       </div>
       <div className="w-full max-w-[97rem]">
