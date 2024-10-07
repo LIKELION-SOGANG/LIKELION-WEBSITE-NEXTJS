@@ -1,3 +1,4 @@
+import { FOOTER } from '@/style/zIndex'
 import Link from 'next/link'
 import React from 'react'
 
@@ -7,7 +8,9 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className="w-full px-[2.5rem] py-[1.45rem] flex justify-between font-pp text-[1.5rem]">
+    <footer
+      className="w-full px-[2.5rem] py-[1.45rem] flex justify-between font-pp text-[1.5rem] relative"
+      style={{ zIndex: FOOTER }}>
       <section className="flex gap-[2.5rem] items-center">
         <div>
           <p>Instagram.</p>

@@ -26,7 +26,7 @@ export default function RootLayout({
         className={`${Figtree.className} ${Pp.className} ${Pretendard.className}`}>
         <Header />
         {children}
-      <Footer/>
+        <Footer />
       </body>
     </html>
   )
