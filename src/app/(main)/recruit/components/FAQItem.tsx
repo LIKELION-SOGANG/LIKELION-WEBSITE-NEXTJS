@@ -17,7 +17,7 @@ const FAQItem = ({ items }: Items) => {
             <div
               key={element.Q}
               className="flex-1 bg-grey p-[1.7rem] mt-[3.9rem] rounded-[1rem]">
-              <div className="justify-between text-[1.6rem] font-semibold flex items-center">
+              <div className="justify-between text-[1.5rem] tablet:text-[1.6rem] font-semibold flex items-center">
                 <div className="">{element.Q}</div>
                 <div>
                   <svg

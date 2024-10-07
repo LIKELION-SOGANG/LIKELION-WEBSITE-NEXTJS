@@ -1,8 +1,10 @@
 import { AreaObj } from '@/utils/recruitMockData'
 import React from 'react'
+
 //
 //
 //
+
 interface Items {
   items: AreaObj[]
 }
