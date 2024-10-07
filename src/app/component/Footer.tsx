@@ -1,6 +1,7 @@
 'use-client'
 import { FOOTER } from '@/style/zIndex'
 import Link from 'next/link'
+import { relative } from 'path'
 import React from 'react'
 
 //
@@ -10,9 +11,9 @@ import React from 'react'
 export default function Footer() {
   return (
     <footer
-      className="w-full px-[2.5rem] py-[1.45rem] flex justify-between font-pp text-[1.5rem] relative"
-      style={{ zIndex: FOOTER }}>
-      <section className="flex gap-[2.5rem] items-center">
+      className="w-full px-[2.5rem] py-[1.45rem] flex justify-between font-pp text-[1.2rem] tablet:text-[1.5rem]"
+      style={{ position: 'relative', zIndex: FOOTER }}>
+      <section className="flex flex-col tablet:flex-row gap-[1.4rem] tablet:gap-[2.5rem]">
         <div>
           <p>Instagram.</p>
           <p>
@@ -24,7 +25,7 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <p>Email</p>
+          <p>Email.</p>
           <p>
             <a
               href="malito:likelion_sg@gmail.com"
@@ -34,12 +35,19 @@ export default function Footer() {
           </p>
         </div>
       </section>
-      <section>
+      <section className="flex items-end">
         <div>
           <p className="text-right underline">
-            <Link href={'/credit'}>↖︎ Credits</Link>
+            <Link
+              href={'/credit'}
+              className="text-[2.6rem] tablet:text-[1.5rem]">
+              ↖︎ Credits
+            </Link>
           </p>
-          <p>© Likelion Sogang. All Rights Reserved.</p>
+          <p>
+            © Like<span className="italic">lion</span> Sogang. All Rights
+            Reserved.
+          </p>
         </div>
       </section>
     </footer>
