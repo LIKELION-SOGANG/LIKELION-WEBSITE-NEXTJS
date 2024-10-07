@@ -3,7 +3,7 @@ import mongoose, { Schema } from 'mongoose'
 export const MemberSchema = new Schema({
   _id: String,
   name: String,
-  generation: String,
+  generation: Number,
   type: String
 })
 
