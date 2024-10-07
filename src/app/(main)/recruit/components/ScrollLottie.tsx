@@ -1,7 +1,9 @@
 'use client'
 import React from 'react'
-import Lottie from 'react-lottie-player'
+import dynamic from 'next/dynamic'
 import animationData from '@/../public/lottie/animation.json'
+
+const Lottie = dynamic(() => import('react-lottie-player'), { ssr: false })
 
 //
 //
