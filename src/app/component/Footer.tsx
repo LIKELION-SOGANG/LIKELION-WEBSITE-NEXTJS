@@ -1,3 +1,4 @@
+'use-client'
 import { FOOTER } from '@/style/zIndex'
 import Link from 'next/link'
 import React from 'react'
@@ -14,11 +15,23 @@ export default function Footer() {
       <section className="flex gap-[2.5rem] items-center">
         <div>
           <p>Instagram.</p>
-          <p>@likelion_sg</p>
+          <p>
+            <a
+              href="https://www.instagram.com/likelion_sg/"
+              target="_blank">
+              @likelion_sg
+            </a>
+          </p>
         </div>
         <div>
           <p>Email</p>
-          <p>likelion_sg@gmail.com</p>
+          <p>
+            <a
+              href="malito:likelion_sg@gmail.com"
+              title="멋사 서강대로 메일 보내기">
+              likelion_sg@gmail.com
+            </a>
+          </p>
         </div>
       </section>
       <section>
