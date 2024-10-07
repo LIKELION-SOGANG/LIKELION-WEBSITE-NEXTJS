@@ -24,7 +24,7 @@ const Recruit1 = () => {
         <div className="tablet:hidden absolute w-[10rem] h-[10rem] top-[45.4rem] right-[2.5rem] rounded-full bg-white flex items-center justify-center">
           <div className="text-black text-[1.6rem] text-center whitespace-pre-line">{`APLLY\nNOW`}</div>
         </div>
-        <div className="absolute top-[75rem]">
+        <div className="absolute top-[80vh]">
           <ScrollLottie />
         </div>
       </div>

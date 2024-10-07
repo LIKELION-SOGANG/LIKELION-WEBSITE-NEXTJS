@@ -1,7 +1,21 @@
+'use client'
 import React from 'react'
+import Lottie from 'react-lottie-player'
+import animationData from '@/../public/lottie/animation.json'
 
-const ScrollLottie = () => {
-  return <div>스크롤 Lottie</div>
+//
+//
+//
+
+export default function ScrollLottie() {
+  return (
+    <div>
+      <Lottie
+        animationData={animationData}
+        loop
+        play
+        style={{ width: 50, height: 130 }}
+      />
+    </div>
+  )
 }
-
-export default ScrollLottie
