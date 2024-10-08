@@ -6,7 +6,15 @@ import ProjectItem from './ProjectItem'
 import TabBtn from './TabBtn'
 import { Project } from '@/type/project'
 
-const tabList = [6, 7, 8, 9, 10, 11, 12]
+//
+//
+//
+
+const TAB_LIST = [11, 12]
+
+//
+//
+//
 
 export default function PageContent({
   projectList
@@ -34,7 +42,7 @@ export default function PageContent({
       <div className="hidden tablet:block w-full">
         <div className="w-full flex flex-col items-center"></div>
         <div className="flex gap-[7px] justify-center ">
-          {tabList.map(tab => (
+          {TAB_LIST.map(tab => (
             <TabBtn
               key={tab}
               generation={tab}
@@ -61,8 +69,7 @@ export default function PageContent({
       <div className="block tablet:hidden w-screen min-h-screen bg-black">
         <div className="px-[30px] pt-[126px] flex gap-[20px] w-full h-full">
           <div className="sticky left-0 top-[126px] h-[calc(100vh-126px)] flex flex-col gap-[24px] pr-[20px] border-solid border-0 border-r border-[#B7B7B7]">
-            {tabList
-              .slice(0)
+            {TAB_LIST.slice(0)
               .reverse()
               .map(tab => (
                 <TabBtn

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import '@/style/globals.css'
 import { Figtree, Pp, Pretendard } from '@/utils/Font'
 import Header from '../component/Header'
+import Footer from '../component/Footer'
 //
 //
 //
@@ -25,6 +26,7 @@ export default function RootLayout({
         className={`${Figtree.className} ${Pp.className} ${Pretendard.className}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
