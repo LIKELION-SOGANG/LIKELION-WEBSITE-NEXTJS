@@ -9,13 +9,13 @@ export default function CloseBtn() {
     <Link
       href={'/project'}
       scroll={false}
-      className="absolute top-[15px] right-[30px]">
+      className="absolute top-[18px] right-[18px]">
       <Image
         src="/icon/button/closeX-black.svg"
         className="relative z-[1000]"
         alt="Link icon"
-        width={'40'}
-        height={'40'}
+        width={'30'}
+        height={'30'}
       />
     </Link>
   )

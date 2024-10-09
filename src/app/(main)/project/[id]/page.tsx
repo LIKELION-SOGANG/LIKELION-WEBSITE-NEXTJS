@@ -23,20 +23,20 @@ export default async function ModalPage(props: ModalPageProps) {
 
   return props.params.id && currentProject ? (
     <>
+      <div className="flex flex-col">
+        <span className=" tablet:text-[48px] text-[36px] font-semibold mb-[9px] leading-tight break-keep">
+          {currentProject.project}
+        </span>
+        <span className="text-[16px] font-normal mb-[12px] leading-tight">
+          {currentProject.generation}th | {currentProject.generation + 2012}
+        </span>
+        <p className="font-pretendard tablet:text-[20px] text-[16px] font-medium mb-[30px] leading-normal">
+          Team {currentProject.team}
+          <br />
+          {currentProject.member}
+        </p>
+      </div>
       <div className="scroll-container h-[500px] overflow-scroll">
-        <div className="flex flex-col">
-          <span className=" tablet:text-[48px] text-[36px] font-semibold mb-[9px] leading-tight break-keep">
-            {currentProject.project}
-          </span>
-          <span className="text-[16px] font-normal mb-[12px] leading-tight">
-            {currentProject.generation}th | {currentProject.generation + 2012}
-          </span>
-          <p className="font-pretendard tablet:text-[20px] text-[16px] font-medium mb-[30px] leading-normal">
-            Team {currentProject.team}
-            <br />
-            {currentProject.member}
-          </p>
-        </div>
         <Image
           src={currentProject.imageUrl}
           alt="project image"
