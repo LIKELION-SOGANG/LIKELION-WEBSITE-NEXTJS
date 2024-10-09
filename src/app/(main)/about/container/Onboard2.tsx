@@ -33,7 +33,7 @@ export default function Onboard2() {
         </div>
       </div>
       <div className="flex justify-center items-center w-full h-screen bg-white">
-        <div className="text-black flex flex-col items-center mobile:flex">
+        <div className="text-black hidden tablet:flex tablet:flex-col tablet:items-center">
           <div className="text-4xl">WE ARE</div>
           <div className="font-pp cursor-pointer text-8xl">
             Like<span className="italic">lion</span> So
@@ -42,8 +42,9 @@ export default function Onboard2() {
           <div className="mt-32 text-center text-3xl">
             멋쟁이사자처럼 서강대학교는 대면 교육 세션, 데모데이 등 다채로운
             활동을 통해
-            <br /> 매년 구성원들의{' '}
-            <span className="font-black">폭발적인 성장</span>을 이끌어내고
+            <br />
+            매년 구성원들의
+            <span className="font-black">{'폭발적인 성장'} </span>을 이끌어내고
             있습니다.
             <br />
             그 성과로, 대학생 1500명이 참여한 작년 ‘멋쟁이사자처럼 전국 연합
@@ -52,7 +53,7 @@ export default function Onboard2() {
             했습니다.
           </div>
         </div>
-        <div className="text-black flex flex-col items-center mobile:hidden">
+        <div className="text-black flex flex-col items-center tablet:hidden">
           <div className="text-2xl">WE ARE</div>
           <div className="font-pp cursor-pointer text-6xl">
             Like<span className="italic">lion</span> So

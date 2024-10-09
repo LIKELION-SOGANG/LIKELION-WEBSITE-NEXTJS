@@ -84,7 +84,7 @@ export default function Onboard5() {
             ))}
           </div>
         </div>
-        <div className="w-3/5 flex flex-col items-center justify-center mt-24 gap-[2rem] block mobile:hidden">
+        <div className="w-4/5 flex flex-col items-center justify-center mt-24 gap-[2rem] mobile:hidden overflow-scroll">
           <div className="flex gap-[1rem]">
             {mobile.slice(0, 6).map((el, key) => (
               <figure
