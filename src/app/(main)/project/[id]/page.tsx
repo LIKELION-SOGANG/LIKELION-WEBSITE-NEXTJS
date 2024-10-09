@@ -19,32 +19,35 @@ export default async function ModalPage(props: ModalPageProps) {
   const currentProject = projectList.find(
     (project: Project) => project._id === props.params.id
   )
+  // useLockBodyScroll()
 
   return props.params.id && currentProject ? (
     <>
-      <div className="flex flex-col ">
-        <span className=" tablet:text-[48px] text-[36px] font-semibold mb-[9px] leading-tight break-keep">
-          {currentProject.project}
-        </span>
-        <span className="text-[16px] font-normal mb-[12px] leading-tight">
-          {currentProject.generation}th | {currentProject.generation + 2012}
-        </span>
-        <p className="font-pretendard tablet:text-[20px] text-[16px] font-medium mb-[30px] leading-normal">
-          Team {currentProject.team}
-          <br />
-          {currentProject.member}
+      <div className="scroll-container h-[500px] overflow-scroll">
+        <div className="flex flex-col">
+          <span className=" tablet:text-[48px] text-[36px] font-semibold mb-[9px] leading-tight break-keep">
+            {currentProject.project}
+          </span>
+          <span className="text-[16px] font-normal mb-[12px] leading-tight">
+            {currentProject.generation}th | {currentProject.generation + 2012}
+          </span>
+          <p className="font-pretendard tablet:text-[20px] text-[16px] font-medium mb-[30px] leading-normal">
+            Team {currentProject.team}
+            <br />
+            {currentProject.member}
+          </p>
+        </div>
+        <Image
+          src={currentProject.imageUrl}
+          alt="project image"
+          width={'537'}
+          height={'314'}
+          className="rounded-2xl mb-[30px] tablet:w-[537px] w-full tablet:h-auto"
+        />
+        <p className="font-pretendard tablet:text-[20px] text-[14px] mb-[60px] font-medium leading-normal">
+          {currentProject.description}
         </p>
       </div>
-      <Image
-        src={currentProject.imageUrl}
-        alt="project image"
-        width={'537'}
-        height={'314'}
-        className="rounded-2xl mb-[30px] tablet:w-[537px] w-full tablet:h-auto "
-      />
-      <p className="font-pretendard tablet:text-[20px] text-[14px] mb-[60px] font-medium leading-normal">
-        {currentProject.description}
-      </p>
       <LinkBtn url={currentProject.github} />
       <CloseBtn />
     </>
