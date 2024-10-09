@@ -60,9 +60,6 @@ export default function Header() {
         <nav className="ml-auto hidden tablet:flex gap-[1.5rem]">
           <Link
             href={'/about'}
-            onClick={() => {
-              setIsShowMobileMenu(false)
-            }}
             className="font-pp italic text-HeaderPC p-[0.5rem]">
             About
           </Link>
@@ -120,26 +117,41 @@ export default function Header() {
           <ul className="font-pp text-[3.2rem] font-[300]">
             <Link
               href="/about"
+              onClick={() => {
+                setIsShowMobileMenu(false)
+              }}
               className="px-[3rem] py-[1.1rem] block border-b border-white">
               About
             </Link>
             <Link
               href="/people"
+              onClick={() => {
+                setIsShowMobileMenu(false)
+              }}
               className="px-[3rem] py-[1.1rem] block border-b border-white">
               People
             </Link>
             <Link
               href="/project "
+              onClick={() => {
+                setIsShowMobileMenu(false)
+              }}
               className="px-[3rem] py-[1.1rem] block border-b border-white">
               Project
             </Link>
             <Link
               href="/recruit"
+              onClick={() => {
+                setIsShowMobileMenu(false)
+              }}
               className="px-[3rem] py-[1.1rem] block border-b border-white">
               Recruit
             </Link>
             <Link
               href="/contact"
+              onClick={() => {
+                setIsShowMobileMenu(false)
+              }}
               className="px-[3rem] py-[1.1rem] block border-b border-white">
               Contact
             </Link>
