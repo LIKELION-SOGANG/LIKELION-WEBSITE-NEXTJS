@@ -1,12 +1,12 @@
 export type Project = {
-  _id?: string
-  generation?: number
-  description?: string
-  github?: string
-  imageUrl?: string
-  member?: string
-  project?: string
-  team?: string
+  _id: string
+  generation: number
+  description: string
+  github: string
+  imageUrl: string
+  member: string
+  project: string
+  team: string
 }
 
 export interface TabBtnProps {
