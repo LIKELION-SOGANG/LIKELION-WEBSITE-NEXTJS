@@ -1,25 +1,59 @@
-import React from 'react'
+'use client'
+
+import React, { MutableRefObject, useEffect, useRef, useState } from 'react'
 import Recruit1 from './container/Recruit1'
 import Recruit2 from './container/Recruit2'
-import { PAGE } from '@/style/zIndex'
-import { Metadata } from 'next'
+import PcOnly from './container/PcOnly'
 //
 //
 //
-export const metadata: Metadata = {
-  title: '리크루트 정보 · 서강대 멋사',
-  description: '서강대학교 멋쟁이사자처럼 지원하기, 리크루팅 정보 페이지입니다.'
-}
-//
-//
-//
+
 export default function RecruitPage() {
+  const [pcOnly, setPcOnly] = useState(false)
+
+  const detectRef = useRef<HTMLDivElement | null>(null)
+  const backgroundRef = useRef<HTMLDivElement | null>(null)
+  const recruit1ImgRef = useRef<HTMLDivElement | null>(null)
+
+  const onIntersection = (entries: IntersectionObserverEntry[]) => {
+    const firstEntry = entries[0]
+    if (firstEntry.isIntersecting) {
+      backgroundRef.current?.style.setProperty('background', 'white')
+      recruit1ImgRef.current?.style.setProperty('opacity', '0');
+      
+    } else {
+      backgroundRef.current?.style.setProperty('background', 'black');
+      recruit1ImgRef.current?.style.setProperty('opacity', '1');
+    }
+  }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(onIntersection)
+
+    if (detectRef.current) {
+      observer.observe(detectRef.current)
+    }
+
+    return () => {
+      if (detectRef.current) {
+        observer.unobserve(detectRef.current)
+      }
+    }
+  }, [])
   return (
-    <main
-      className={`relative`}
-      style={{ zIndex: PAGE }}>
-      <Recruit1 />
-      <Recruit2 />
-    </main>
+    <>
+      {pcOnly ? (
+        <div>
+          <PcOnly setPcOnly={setPcOnly} />
+        </div>
+      ) : (
+        <div
+          ref={backgroundRef}
+          className="transition-all duration-500 ease-in-out bg-black">
+          <Recruit1 setPcOnly={setPcOnly} recruit1ImgRef={recruit1ImgRef}/>
+          <Recruit2 detectRef={detectRef} />
+        </div>
+      )}
+    </>
   )
 }

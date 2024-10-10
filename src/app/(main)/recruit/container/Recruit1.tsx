@@ -1,30 +1,64 @@
-import React from 'react'
-import ScrollLottie from '../components/ScrollLottie'
+'use client'
 
-const Recruit1 = () => {
+import React, { useState } from 'react'
+import ScrollLottie from '../components/ScrollLottie'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import PCOnly from '../components/PCOnly'
+
+interface Recruit1Props {
+  setPcOnly: React.Dispatch<React.SetStateAction<boolean>>
+  recruit1ImgRef: React.MutableRefObject<HTMLDivElement|null>
+
+}
+
+const Recruit1 = ({ setPcOnly,recruit1ImgRef}: Recruit1Props) => {
+  //const router = useRouter()
+
+  const onClickApply = () => {
+
+    alert("현재 지원 기간이 아닙니다.")
+    return
+    // router.push('/apply')
+  }
+
   return (
     <div className="overflow-x-hidden">
       <div className="flex justify-end">
-        <div className="w-[1270px] relative h-[1270px] m-[36px_0_150px_200px] max-tablet:ml-0 box-border flex justify-end">
-          <div className="w-[1270px] max-tablet:w-[1270px] // max-desktop:right-[-20rem] max-tablet:right-[-50rem] max-mobile:right-[-62.5rem] // max-tablet:top-[-10rem] -z-10 flex justify-center absolute h-full bg-[url('/images/about/obj2.png')] bg-lightgray bg-center bg-cover bg-no-repeat"></div>
+        <div className="pointer-events-none w-[1270px]  h-[1270px] relative m-[36px_0_150px_200px] max-tablet:ml-0 box-border flex justify-end">
+          <div ref={recruit1ImgRef} className="transition-opacity duration-500 ease-in-out w-[1270px] h-[1270px] // max-tablet:right-[-50rem] max-mobile:right-[-62.5rem] max-desktop:right-[-20rem] // max-tablet:top-[-10rem] // absolute flex justify-center">
+            <Image
+              src="/images/recruit/obj2.png"
+              alt="Background Image"
+              layout="fill"
+              objectFit="cover"
+              priority={true}
+              sizes="(max-width: 768px) 100vw, 1270px"
+            />
+          </div>
         </div>
       </div>
-      <div className="flex justify-center ">
-        <div className="absolute font-pp -z-10 max-tablet:top-[23.8rem] top-[35rem] text-center italic text-[9rem] max-desktop:text-[9rem] max-tablet:text-[4.5rem]">
+      <div className="flex justify-center">
+        <div className="text-white absolute font-pp max-tablet:top-[23.8rem] top-[35rem] text-center italic text-[9rem] max-desktop:text-[9rem] max-tablet:text-[4.5rem]">
           Want To <br className="tablet:hidden" />
           Join Us?
         </div>
 
-        <div className="max-tablet:hidden absolute top-[50rem] rounded-[3rem] bg-white">
-          <div className="text-black text-[2rem] p-[1.5rem_3rem]">
-            APLLY NOW
-          </div>
-        </div>
+        <button
+          onClick={onClickApply}
+          className="cursor-pointer text-black text-[2rem] p-[1.5rem_3rem] max-tablet:hidden absolute top-[50rem] rounded-[3rem] bg-white">
+          APLLY NOW
+        </button>
 
-        <div className="tablet:hidden absolute w-[10rem] h-[10rem] top-[45.4rem] right-[2.5rem] rounded-full bg-white flex items-center justify-center">
-          <div className="text-black text-[1.6rem] text-center whitespace-pre-line">{`APLLY\nNOW`}</div>
+        <div onClick={() =>
+              setPcOnly(prev => {
+                return !prev
+              })
+            } className="cursor-pointer tablet:hidden absolute w-[10rem] h-[10rem] top-[45.4rem] right-[2.5rem] rounded-full bg-white flex items-center justify-center">
+          <span
+            className="text-black text-[1.6rem] text-center whitespace-pre-line">{`APLLY\nNOW`}</span>
         </div>
-        <div className="absolute top-[80vh]">
+        <div className="absolute top-[75rem]">
           <ScrollLottie />
         </div>
       </div>

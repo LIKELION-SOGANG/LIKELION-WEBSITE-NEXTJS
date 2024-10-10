@@ -13,7 +13,7 @@ const SaveButton = () => {
         완료하시기 바랍니다.
       </div>
 
-      <div className="mb-[1rem] mt-[2.4rem]">
+      <div className="mb-[1rem] mt-[2.4rem] cursor-pointer">
         <Button
           title="지원서 저장하기"
           isable={true}
