@@ -8,7 +8,8 @@ import Footer from '../component/Footer'
 //
 export const metadata: Metadata = {
   title: '서강대학교 멋쟁이사자처럼 공식홈페이지',
-  description: '서강대학교 멋쟁이사자처럼의 공식 홈페이지입니다.'
+  description:
+    '서강대학교 멋쟁이사자처럼의 공식 홈페이지입니다. 서강대학교 멋쟁이사자처럼의 역사, 수상내역, 알럼나이 아웃풋, 타임라인에 대해 소개합니다. 정기 교육 세션인 Lion Sprint에서 배우는 기술 스택들을 소개합니다. '
 }
 //
 //

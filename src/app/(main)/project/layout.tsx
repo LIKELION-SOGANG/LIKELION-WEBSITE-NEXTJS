@@ -4,7 +4,18 @@ import PageTitle from './container/components/PageTitle'
 import PageContent from './container/components/PageContent'
 import { getAllProjects } from '@/client-api/api'
 import { PAGE } from '@/style/zIndex'
-
+import { Metadata } from 'next'
+//
+//
+//
+export const metadata: Metadata = {
+  title: 'Our Projects · 서강대 멋사',
+  description:
+    '서강대학교 멋쟁이사자처럼의 Output이자 역대 프로젝트 리스트 페이지입니다.'
+}
+//
+//
+//
 export default async function ProjetcLayout({
   children
 }: {

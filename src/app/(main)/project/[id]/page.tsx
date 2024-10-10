@@ -4,7 +4,11 @@ import CloseBtn from '../container/components/CloseBtn'
 import LinkBtn from '../container/components/LinkBtn'
 import { ModalPageProps, Project } from '@/type/project'
 import { getAllProjects } from '@/client-api/api'
-import { useLockBodyScroll } from 'react-use'
+import { Metadata } from 'next'
+
+//
+//
+//
 
 export async function generateStaticParams() {
   const projectList = await getAllProjects()
@@ -14,12 +18,36 @@ export async function generateStaticParams() {
   }))
 }
 
+export async function generateMetadata({
+  params
+}: ModalPageProps): Promise<Metadata> {
+  const { id } = params
+  const projectList: Project[] = await getAllProjects()
+  const currentProject = projectList.find(
+    (project: Project) => project._id === id
+  )
+  if (!currentProject) {
+    return {
+      title: 'Project Not Found',
+      description: 'The project you are looking for does not exist.'
+    }
+  }
+
+  return {
+    title: `${currentProject.project}` + '· 서강대 멋사 프로젝트',
+    description: currentProject.description
+  }
+}
+
+//
+//
+//
+
 export default async function ModalPage(props: ModalPageProps) {
-  const projectList = await getAllProjects()
+  const projectList: Project[] = await getAllProjects()
   const currentProject = projectList.find(
     (project: Project) => project._id === props.params.id
   )
-  // useLockBodyScroll()
 
   return props.params.id && currentProject ? (
     <>

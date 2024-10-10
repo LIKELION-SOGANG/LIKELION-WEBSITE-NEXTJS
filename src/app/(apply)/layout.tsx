@@ -7,8 +7,8 @@ import ApplyHeader from './apply/components/ApplyHeader'
 //
 //
 export const metadata: Metadata = {
-  title: '서강대학교 멋쟁이사자처럼 지원하기',
-  description: '서강대학교 멋쟁이사자처럼 지원하기 페이지입니다.'
+  title: 'Apply · 서강대 멋사',
+  description: '서강대학교 멋쟁이사자처럼에 지원하기 페이지입니다.'
 }
 //
 //
