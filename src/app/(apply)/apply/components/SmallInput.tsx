@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface SmallInputProps {
-  onChangeInput: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onChangeInput?: (e: React.ChangeEvent<HTMLInputElement>) => void
   placeholder?: string
   name?: string
   value?: string
