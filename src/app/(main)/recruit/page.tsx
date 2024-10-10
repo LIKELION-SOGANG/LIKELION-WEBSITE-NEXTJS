@@ -4,6 +4,9 @@ import React, { MutableRefObject, useEffect, useRef, useState } from 'react'
 import Recruit1 from './container/Recruit1'
 import Recruit2 from './container/Recruit2'
 import PcOnly from './container/PcOnly'
+//
+//
+//
 
 export default function RecruitPage() {
   const [pcOnly, setPcOnly] = useState(false)
