@@ -9,7 +9,7 @@
   ],
   "rules": {
     "react/no-unescaped-entities": 0,
-    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error"
   }
 }

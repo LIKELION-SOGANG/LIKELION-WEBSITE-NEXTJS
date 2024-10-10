@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FAQObj } from '../../../../utils/recruitMockData'
 import ArrowLink from '../../../../../public/icon/button/FAQ-arrow-button.svg'
 
@@ -48,4 +48,4 @@ const FAQItem = ({ items }: Items) => {
   )
 }
 
-export default FAQItem;
+export default FAQItem

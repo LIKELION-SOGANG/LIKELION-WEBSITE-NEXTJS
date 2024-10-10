@@ -1,14 +1,17 @@
-import React from 'react'
 import Button from '../components/Button'
 import SmallInput from '../components/SmallInput'
-import ApplyHeader from '../components/ApplyHeader'
-import SaveComplete from './SaveComplete'
-import EditPersonalInfo from './EditPersonalInfo'
-import CheckingPass from '../components/CheckingPass'
-import PersonalInformationForm from './PersonalInformationForm'
-import PersonalStatementForm from './PersonalStatementForm'
-import Passed from '../components/Passed'
-import Nonpassed from '../components/Nonpassed'
+// import ApplyHeader from '../components/ApplyHeader'
+// import SaveComplete from './SaveComplete'
+// import EditPersonalInfo from './EditPersonalInfo'
+// import CheckingPass from '../components/CheckingPass'
+// import PersonalInformationForm from './PersonalInformationForm'
+// import PersonalStatementForm from './PersonalStatementForm'
+// import Passed from '../components/Passed'
+// import Nonpassed from '../components/Nonpassed'
+
+//
+//
+//
 
 const ApplySection = () => {
   return (

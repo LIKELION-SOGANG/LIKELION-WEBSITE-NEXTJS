@@ -16,9 +16,7 @@ const Recruit2 = ({
       ref={detectRef}
       className="p-[4rem] text-black">
       <ScheduleItem items={scheduleObj} />
-
       <AreaItem items={areaObj} />
-
       <FAQItem items={FAQObj} />
     </div>
   )
