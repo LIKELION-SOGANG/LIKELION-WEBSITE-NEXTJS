@@ -12,7 +12,9 @@ import { Metadata } from 'next'
 
 export async function generateStaticParams() {
   const projectList = await getAllProjects()
-
+  if (!projectList) {
+    return [{ id: '1' }]
+  }
   return projectList.map((project: Project) => ({
     id: project._id
   }))
@@ -23,6 +25,12 @@ export async function generateMetadata({
 }: ModalPageProps): Promise<Metadata> {
   const { id } = params
   const projectList: Project[] = await getAllProjects()
+  if (!projectList) {
+    return {
+      title: 'Project Not Found',
+      description: 'The project you are looking for does not exist.'
+    }
+  }
   const currentProject = projectList.find(
     (project: Project) => project._id === id
   )
@@ -46,6 +54,7 @@ export async function generateMetadata({
 
 export default async function ModalPage(props: ModalPageProps) {
   const projectList: Project[] = await getAllProjects()
+  if (!projectList) return null
   const currentProject = projectList.find(
     (project: Project) => project._id === props.params.id
   )
