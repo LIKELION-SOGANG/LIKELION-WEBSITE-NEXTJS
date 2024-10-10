@@ -1,12 +1,15 @@
 import React from 'react'
-import ScheduleItem from '../components/ScheduleItem'
+import { scheduleObj } from '../../../../utils/recruitMockData'
+import { areaObj } from '../../../../utils/recruitMockData'
+import { FAQObj } from '../../../../utils/recruitMockData'
 import FAQItem from '../components/FAQItem'
 import AreaItem from '../components/AreaItem'
-import { areaObj, FAQObj, scheduleObj } from '@/utils/recruitMockData'
+import ScheduleItem from '../components/ScheduleItem'
 
 const Recruit2 = () => {
   return (
-    <div className="bg-white p-[4rem] text-black">
+    <div
+      className="p-[4rem] text-black">
       <ScheduleItem items={scheduleObj} />
       <AreaItem items={areaObj} />
       <FAQItem items={FAQObj} />

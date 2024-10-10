@@ -124,18 +124,21 @@ export const meeting = [
 ]
 
 export const personalInformation = [
-  { title: '이름', placeholder: '지원자의 이름을 입력해주세요.' },
+  { name: 'name', title: '이름', placeholder: '지원자의 이름을 입력해주세요.' },
   {
+    name: 'studentNumber',
     title: '학번',
     placeholder: '서강대학교 학번을 입력해주세요 .ex) 20220001'
   },
   {
+    name: 'email',
     title: '이메일',
     placeholder: '이메일 주소를 입력해주세요. ex) likelionsg@gmail.com'
   }
 ]
 
 export const personalPhoneNumber = {
+  name: 'phone',
   title: '전화번호',
   placeholder: '연락가능한 전화번호를 입력해주세요. ex) 010-1234-5678'
 }

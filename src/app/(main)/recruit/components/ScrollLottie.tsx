@@ -1,23 +1,23 @@
-'use client'
 import React from 'react'
-import dynamic from 'next/dynamic'
-import animationData from '@/../public/lottie/animation.json'
+import Lottie from 'lottie-react'
+import ScrollAnimationInDesktop from '../../../../../public/lottie/animationDesktop.json'
+import ScrollAnimationInMobile from '../../../../../public/lottie/animationMobile.json'
 
-const Lottie = dynamic(() => import('react-lottie-player'), { ssr: false })
-
-//
-//
-//
-
-export default function ScrollLottie() {
+const ScrollLottie = () => {
   return (
     <div>
       <Lottie
-        animationData={animationData}
-        loop
-        play
-        style={{ width: 50, height: 130 }}
+        className="max-tablet:hidden"
+        animationData={ScrollAnimationInDesktop}
+        loop={true}
+      />
+      <Lottie
+        className="tablet:hidden"
+        animationData={ScrollAnimationInMobile}
+        loop={true}
       />
     </div>
   )
 }
+
+export default ScrollLottie

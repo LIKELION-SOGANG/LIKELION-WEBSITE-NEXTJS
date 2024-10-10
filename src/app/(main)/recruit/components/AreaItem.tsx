@@ -1,9 +1,6 @@
 import { AreaObj } from '@/utils/recruitMockData'
 import React from 'react'
-
-//
-//
-//
+import Link from 'next/link'
 
 interface Items {
   items: AreaObj[]
@@ -15,7 +12,7 @@ interface Items {
 const AreaItem = ({ items }: Items) => {
   return (
     <div className="flex flex-col items-center mb-[12rem]  max-tablet:mb-[12.7rem]">
-      <div className="font-pp text-[2.4rem] tablet:text-[3.2rem] italic mb-[3.8rem]">
+      <div className="font-pp max-tablet:text-[2.4rem] text-[3.2rem] italic mb-[3.8rem]">
         Area
       </div>
       <div className="flex gap-[2.8rem] w-full max-w-[97rem] max-tablet:flex-col">
@@ -29,8 +26,8 @@ const AreaItem = ({ items }: Items) => {
                 {item.description}
               </div>
               <div className="mt-[1rem]">
-                <a
-                  className="flex items-center text-[#B7B7B7]"
+                <Link
+                  className="flex items-center text-[#B7B7B7] w-[9rem]"
                   href={`${item.linkToSkill}`}>
                   <svg
                     className="block"
@@ -44,10 +41,10 @@ const AreaItem = ({ items }: Items) => {
                       fill="#B7B7B7"
                     />
                   </svg>
-                  <div className="ml-[0.2rem] underline">
+                  <span className="ml-[0.2rem] underline">
                     기술 스택 보러가기
-                  </div>
-                </a>
+                  </span>
+                </Link>
               </div>
             </div>
           )
