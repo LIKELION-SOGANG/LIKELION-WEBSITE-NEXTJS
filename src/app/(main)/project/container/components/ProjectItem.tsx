@@ -1,6 +1,11 @@
+'use client'
 import { Project } from '@/type/project'
 import Image from 'next/image'
 import Link from 'next/link'
+
+//
+//
+//
 
 export default function ProjectItem(props: Project) {
   return props._id ? (

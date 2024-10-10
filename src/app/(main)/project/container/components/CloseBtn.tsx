@@ -1,17 +1,21 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useLockBodyScroll } from 'react-use'
 
 export default function CloseBtn() {
+  useLockBodyScroll()
   return (
     <Link
       href={'/project'}
-      scroll={false}>
+      scroll={false}
+      className="absolute top-[18px] right-[18px]">
       <Image
         src="/icon/button/closeX-black.svg"
+        className="relative z-[1000]"
         alt="Link icon"
-        width={'20'}
-        height={'20'}
-        className="absolute tablet:right-[18px] right-[30px] tablet:top-[18px] top-[53px] tablet:w-[30px] tablet:h-[30px] cursor-pointer"
+        width={'30'}
+        height={'30'}
       />
     </Link>
   )
