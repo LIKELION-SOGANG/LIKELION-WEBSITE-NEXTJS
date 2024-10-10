@@ -1,6 +1,6 @@
 import { Project } from '@/type/project'
 
-const nullElement: Project = {}
+const nullElement = {} as Project
 
 export default function chunkArray(
   array: Project[],

@@ -26,6 +26,7 @@ export async function generateMetadata({
   const currentProject = projectList.find(
     (project: Project) => project._id === id
   )
+
   if (!currentProject) {
     return {
       title: 'Project Not Found',
