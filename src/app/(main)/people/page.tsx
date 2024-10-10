@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 export default async function PeoplePage() {
   const data = await getAllMembers()
+  if (!data) return null
   return (
     <main
       className={`relative`}

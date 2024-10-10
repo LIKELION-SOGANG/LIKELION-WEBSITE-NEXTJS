@@ -22,6 +22,7 @@ export default async function ProjetcLayout({
   children: React.ReactNode
 }) {
   const projectList = await getAllProjects()
+  if (!projectList) return null
   return (
     <>
       <main
