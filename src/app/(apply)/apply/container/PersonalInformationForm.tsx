@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import SmallInput from '../components/SmallInput'
 import Button from '../components/Button'
