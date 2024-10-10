@@ -6,12 +6,19 @@ import FAQItem from '../components/FAQItem'
 import AreaItem from '../components/AreaItem'
 import ScheduleItem from '../components/ScheduleItem'
 
-const Recruit2 = () => {
+const Recruit2 = ({
+  detectRef
+}: {
+  detectRef: React.MutableRefObject<HTMLDivElement | null>
+}) => {
   return (
     <div
+      ref={detectRef}
       className="p-[4rem] text-black">
       <ScheduleItem items={scheduleObj} />
+
       <AreaItem items={areaObj} />
+
       <FAQItem items={FAQObj} />
     </div>
   )

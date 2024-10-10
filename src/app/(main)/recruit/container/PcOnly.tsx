@@ -1,5 +1,5 @@
 import React from 'react'
-import CloseXWhite from '../../../../public/icon/button/closeX-white.svg'
+import CloseXWhite from '../../../../../public/icon/button/closeX-white.svg'
 import { Pp } from '@/utils/Font'
 
 interface PcOnlyProps {

@@ -8,10 +8,12 @@ import PCOnly from '../components/PCOnly'
 
 interface Recruit1Props {
   setPcOnly: React.Dispatch<React.SetStateAction<boolean>>
+  recruit1ImgRef: React.MutableRefObject<HTMLDivElement|null>
+
 }
 
-const Recruit1 = ({ setPcOnly }: Recruit1Props) => {
-  const router = useRouter()
+const Recruit1 = ({ setPcOnly,recruit1ImgRef}: Recruit1Props) => {
+  //const router = useRouter()
 
   const onClickApply = () => {
 
@@ -24,13 +26,12 @@ const Recruit1 = ({ setPcOnly }: Recruit1Props) => {
     <div className="overflow-x-hidden">
       <div className="flex justify-end">
         <div className="pointer-events-none w-[1270px]  h-[1270px] relative m-[36px_0_150px_200px] max-tablet:ml-0 box-border flex justify-end">
-          <div className="w-[1270px] h-[1270px] // max-tablet:right-[-50rem] max-mobile:right-[-62.5rem] max-desktop:right-[-20rem] // max-tablet:top-[-10rem] //  absolute -z-10 flex justify-center">
+          <div ref={recruit1ImgRef} className="transition-opacity duration-500 ease-in-out w-[1270px] h-[1270px] // max-tablet:right-[-50rem] max-mobile:right-[-62.5rem] max-desktop:right-[-20rem] // max-tablet:top-[-10rem] // absolute flex justify-center">
             <Image
               src="/images/recruit/obj2.png"
               alt="Background Image"
               layout="fill"
               objectFit="cover"
-              className="-z-10"
               priority={true}
               sizes="(max-width: 768px) 100vw, 1270px"
             />
@@ -38,7 +39,7 @@ const Recruit1 = ({ setPcOnly }: Recruit1Props) => {
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="absolute font-pp -z-10 max-tablet:top-[23.8rem] top-[35rem] text-center italic text-[9rem] max-desktop:text-[9rem] max-tablet:text-[4.5rem]">
+        <div className="text-white absolute font-pp max-tablet:top-[23.8rem] top-[35rem] text-center italic text-[9rem] max-desktop:text-[9rem] max-tablet:text-[4.5rem]">
           Want To <br className="tablet:hidden" />
           Join Us?
         </div>
