@@ -1,7 +1,4 @@
-import Image from 'next/image'
-import React from 'react'
-
-const companies = [
+const COMPANY_LIST = [
   'samsung',
   'coupang',
   'kaist',
@@ -24,7 +21,7 @@ export default function Onboard4() {
       <div className="">
         <div
           className={`w-full tablet:w-max flex mt-[15rem] justify-center tablet:justify-start items-center gap-[4rem] tablet:gap-[8rem] overflow-hidden`}>
-          {companies.map((el, i) => (
+          {COMPANY_LIST.map((el, i) => (
             <img
               className="w-[9rem] tablet:w-[16rem]"
               key={i}
