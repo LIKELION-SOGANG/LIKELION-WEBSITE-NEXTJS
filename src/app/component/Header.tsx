@@ -5,6 +5,9 @@ import { HEADER, MOBILE_MENU_LIST } from '@/style/zIndex'
 import useScrollDirection from '@/hooks/useScrollDirection'
 import useMobileMenu from '@/hooks/useMobileMenu'
 import { usePathname } from 'next/navigation'
+import { AnimatePresence } from 'framer-motion'
+import Loading from './Loading'
+import useLoadingProgress from '@/hooks/useLoadingProgress'
 
 export default function Header() {
   const isShowHeader = useScrollDirection()
@@ -23,8 +26,13 @@ export default function Header() {
       : 'px-[3rem] py-[1.1rem] block border-b border-white'
   }
 
+  const { isLoading, loadingProgress } = useLoadingProgress(4)
+
   return (
     <>
+      <AnimatePresence>
+        {isLoading && <Loading progress={loadingProgress} />}
+      </AnimatePresence>
       <header
         className={`text-white mix-blend-difference w-full flex fixed top-0 p-[2.5rem] transition-transform duration-500 ${
           isShowHeader ? 'translate-y-0' : '-translate-y-full'

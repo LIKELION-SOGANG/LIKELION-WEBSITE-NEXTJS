@@ -41,6 +41,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-unused-imports": "^4.1.4",
+    "framer-motion": "^11.11.8",
     "husky": "^8.0.0",
     "postcss": "^8",
     "prettier": "^3.3.3",
