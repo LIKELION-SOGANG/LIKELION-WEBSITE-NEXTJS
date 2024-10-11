@@ -14,6 +14,7 @@ const ApplySection = () => {
 
   const onClickStep = () => {
     setStep(prev => prev + 1)
+    window.scrollTo(0,0)
   }
 
   return (
