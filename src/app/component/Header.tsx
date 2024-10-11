@@ -8,11 +8,24 @@ import { usePathname } from 'next/navigation'
 import { AnimatePresence } from 'framer-motion'
 import Loading from './Loading'
 import useLoadingProgress from '@/hooks/useLoadingProgress'
-
+//
+//
+//
 export default function Header() {
+  const pathname = usePathname()
   const isShowHeader = useScrollDirection()
   const { isShowMobileMenu, showMobileMenu, hideMobileMenu } = useMobileMenu()
-  const pathname = usePathname()
+  const { isLoading, loadingProgress, startLoading } =
+    useLoadingProgress(pathname)
+
+  const handleMobileLinkClick = () => {
+    hideMobileMenu()
+    startLoading()
+  }
+
+  const handleLinkClick = () => {
+    startLoading()
+  }
 
   const getLinkClass = (path: string) => {
     return pathname === path
@@ -26,12 +39,10 @@ export default function Header() {
       : 'px-[3rem] py-[1.1rem] block border-b border-white'
   }
 
-  const { isLoading, loadingProgress } = useLoadingProgress(4)
-
   return (
     <>
       <AnimatePresence>
-        {isLoading && <Loading progress={loadingProgress} />}
+        {isLoading && <Loading loadingProgress={loadingProgress} />}
       </AnimatePresence>
       <header
         className={`text-white mix-blend-difference w-full flex fixed top-0 p-[2.5rem] transition-transform duration-500 ${
@@ -47,16 +58,19 @@ export default function Header() {
         <nav className="ml-auto hidden tablet:flex gap-[1.5rem]">
           <Link
             href={'/about'}
+            onClick={handleLinkClick}
             className={getLinkClass('/about')}>
             About
           </Link>
           <Link
             href={'/project'}
+            onClick={handleLinkClick}
             className={getLinkClass('/project')}>
             Project
           </Link>
           <Link
             href={'/people'}
+            onClick={handleLinkClick}
             className={getLinkClass('/people')}>
             People
           </Link>
@@ -67,6 +81,7 @@ export default function Header() {
           </Link>
           <Link
             href={'/contact'}
+            onClick={handleLinkClick}
             className={getLinkClass('/contact')}>
             Contact
           </Link>
@@ -104,31 +119,31 @@ export default function Header() {
           <ul className="font-pp text-[3.2rem] font-[300]">
             <Link
               href="/about"
-              onClick={hideMobileMenu}
+              onClick={handleMobileLinkClick}
               className={getMobileLinkClass('/about')}>
               About
             </Link>
             <Link
               href="/people"
-              onClick={hideMobileMenu}
+              onClick={handleMobileLinkClick}
               className={getMobileLinkClass('/people')}>
               People
             </Link>
             <Link
               href="/project"
-              onClick={hideMobileMenu}
+              onClick={handleMobileLinkClick}
               className={getMobileLinkClass('/project')}>
               Project
             </Link>
             <Link
               href="/recruit"
-              onClick={hideMobileMenu}
+              onClick={handleMobileLinkClick}
               className={getMobileLinkClass('/recruit')}>
               Recruit
             </Link>
             <Link
               href="/contact"
-              onClick={hideMobileMenu}
+              onClick={handleMobileLinkClick}
               className={getMobileLinkClass('/contact')}>
               Contact
             </Link>

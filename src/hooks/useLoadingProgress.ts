@@ -2,26 +2,35 @@ import { useEffect, useState } from 'react'
 //
 //
 //
-const useLoadingProgress = (speed: number) => {
+const useLoadingProgress = (pathname: string) => {
   const [isLoading, setIsLoading] = useState(true)
+  const [loadingSpeed, setLoadingSpeed] = useState(10)
   const [loadingProgress, setLoadingProgress] = useState(0)
 
-  const handleLoadingComplete = () => {
-    setIsLoading(false)
+  const startLoading = () => {
+    setIsLoading(true)
   }
 
   useEffect(() => {
     if (isLoading && loadingProgress < 100) {
       const timer = setTimeout(() => {
-        setLoadingProgress(prev => Math.min(prev + 1, 100)) // 10%씩 증가
-      }, speed) // 0.5초마다 업데이트
+        setLoadingProgress(prev => Math.min(prev + 1, 100))
+      }, loadingSpeed)
       return () => clearTimeout(timer)
     } else if (loadingProgress === 100) {
-      setTimeout(() => setIsLoading(false), 1000)
+      setTimeout(() => {
+        setIsLoading(false)
+        setLoadingProgress(0)
+      }, 400)
     }
-  }, [isLoading, loadingProgress, speed])
+  }, [isLoading, loadingProgress, loadingSpeed])
 
-  return { isLoading, loadingProgress }
+  return {
+    isLoading,
+    loadingProgress,
+    setLoadingSpeed,
+    startLoading
+  }
 }
 
 export default useLoadingProgress
