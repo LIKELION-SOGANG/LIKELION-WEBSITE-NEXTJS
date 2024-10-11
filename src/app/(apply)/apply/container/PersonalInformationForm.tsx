@@ -12,14 +12,24 @@ interface PersonalStatementFormProps {
   onClickStep: () => void
 }
 
+
+
 const PersonalInformationForm = ({
   onClickStep
 }: PersonalStatementFormProps) => {
+
+  const onChangeInput = () => {
+    console.log('not yet')
+  }
+
   return (
     <div className="w-[56.2rem] ">
       <div className="flex flex-col gap-[5rem] mb-[5rem]">
         {personalInformation.map((item, index) => (
           <SmallInput
+            onChangeInput={onChangeInput}
+            value=''
+            name=""
             key={index}
             title={item.title}
             placeholder={item.placeholder}
@@ -27,6 +37,9 @@ const PersonalInformationForm = ({
         ))}
 
         <SmallInput
+          onChangeInput={onChangeInput}
+          value=''
+          name=""
           title={personalPhoneNumber.title}
           placeholder={personalPhoneNumber.placeholder}
         />

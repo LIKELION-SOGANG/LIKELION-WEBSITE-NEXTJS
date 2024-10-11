@@ -17,6 +17,10 @@ const ApplySection = () => {
     window.scrollTo(0,0)
   }
 
+  const onChangeInput = () => {
+    console.log('not yet')
+  }
+
   return (
     <section className="overflow-x-hidden pt-[2rem] bg-white text-black">
       <div className="flex flex-col items-center h-full">
@@ -45,6 +49,9 @@ const ApplySection = () => {
 
               <div>
                 <SmallInput
+                  onChangeInput={onChangeInput}
+                  value=''
+                  name='uniqueNumber'
                   title="이미 작성하던 지원서가 있으시다면,"
                   placeholder="이메일로 발송된 고유번호를 입력해주세요."
                 />
