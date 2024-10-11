@@ -24,7 +24,7 @@ const PersonalStatementForm = ({ onClickStep }: PersonalStatementFormProps) => {
           <LargeInput
             key={index}
             item={item}
-            questionNumber={index + 2}></LargeInput>
+            questionNumber={index + 1}></LargeInput>
         )
       })}
 
@@ -34,7 +34,7 @@ const PersonalStatementForm = ({ onClickStep }: PersonalStatementFormProps) => {
         onChangeInput={onChangeInput}
         value=""
         name="gitURL"
-        title="7. GitHub 계정이 있다면 링크를 올려주세요. (선택)"
+        title="6. GitHub 계정이 있다면 링크를 올려주세요. (선택)"
         placeholder="ex) https://github.com/likelionsg"
       />
 
