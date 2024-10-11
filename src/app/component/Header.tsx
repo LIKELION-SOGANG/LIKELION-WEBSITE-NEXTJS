@@ -4,10 +4,24 @@ import Image from 'next/image'
 import { HEADER, MOBILE_MENU_LIST } from '@/style/zIndex'
 import useScrollDirection from '@/hooks/useScrollDirection'
 import useMobileMenu from '@/hooks/useMobileMenu'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
   const isShowHeader = useScrollDirection()
   const { isShowMobileMenu, showMobileMenu, hideMobileMenu } = useMobileMenu()
+  const pathname = usePathname()
+
+  const getLinkClass = (path: string) => {
+    return pathname === path
+      ? 'font-pp italic text-HeaderPC px-[0.3rem] relative after:content-[""] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-white after:w-full'
+      : 'font-pp font-light italic text-HeaderPC px-[0.3rem] relative after:content-[""] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:bg-white after:w-0 hover:after:w-full hover:after:left-0 after:transition-all after:duration-300'
+  }
+
+  const getMobileLinkClass = (path: string) => {
+    return pathname === path
+      ? 'px-[3rem] py-[1.1rem] block border-b border-white underline'
+      : 'px-[3rem] py-[1.1rem] block border-b border-white'
+  }
 
   return (
     <>
@@ -25,27 +39,27 @@ export default function Header() {
         <nav className="ml-auto hidden tablet:flex gap-[1.5rem]">
           <Link
             href={'/about'}
-            className="font-pp italic text-HeaderPC p-[0.5rem]">
+            className={getLinkClass('/about')}>
             About
           </Link>
           <Link
             href={'/project'}
-            className="font-pp italic text-HeaderPC p-[0.5rem]">
+            className={getLinkClass('/project')}>
             Project
           </Link>
           <Link
             href={'/people'}
-            className="font-pp italic text-HeaderPC p-[0.5rem]">
+            className={getLinkClass('/people')}>
             People
           </Link>
           <Link
             href={'/recruit'}
-            className="font-pp italic text-HeaderPC p-[0.5rem]">
+            className={getLinkClass('/recruit')}>
             Recruit
           </Link>
           <Link
             href={'/contact'}
-            className="font-pp italic text-HeaderPC p-[0.5rem]">
+            className={getLinkClass('/contact')}>
             Contact
           </Link>
         </nav>
@@ -83,31 +97,31 @@ export default function Header() {
             <Link
               href="/about"
               onClick={hideMobileMenu}
-              className="px-[3rem] py-[1.1rem] block border-b border-white">
+              className={getMobileLinkClass('/about')}>
               About
             </Link>
             <Link
               href="/people"
               onClick={hideMobileMenu}
-              className="px-[3rem] py-[1.1rem] block border-b border-white">
+              className={getMobileLinkClass('/people')}>
               People
             </Link>
             <Link
               href="/project"
               onClick={hideMobileMenu}
-              className="px-[3rem] py-[1.1rem] block border-b border-white">
+              className={getMobileLinkClass('/project')}>
               Project
             </Link>
             <Link
               href="/recruit"
               onClick={hideMobileMenu}
-              className="px-[3rem] py-[1.1rem] block border-b border-white">
+              className={getMobileLinkClass('/recruit')}>
               Recruit
             </Link>
             <Link
               href="/contact"
               onClick={hideMobileMenu}
-              className="px-[3rem] py-[1.1rem] block border-b border-white">
+              className={getMobileLinkClass('/contact')}>
               Contact
             </Link>
           </ul>
