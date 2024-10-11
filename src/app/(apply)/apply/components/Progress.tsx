@@ -10,7 +10,6 @@ const Progress = ({ step }: { step: number }) => {
       mountRef.current = true
       return
     }
-    console.log(progress[-1])
     setProgress(prev => {
       const newProgress = [...prev]
       newProgress[step - 1] = true
