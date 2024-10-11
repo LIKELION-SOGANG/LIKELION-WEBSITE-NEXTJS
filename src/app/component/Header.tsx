@@ -1,48 +1,13 @@
 'use client'
-import { HEADER, MOBILE_MENU_LIST } from '@/style/zIndex'
-import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState, useEffect } from 'react'
-import { useLockBodyScroll } from 'react-use'
-
-//
-//
-//
+import Image from 'next/image'
+import { HEADER, MOBILE_MENU_LIST } from '@/style/zIndex'
+import useScrollDirection from '@/hooks/useScrollDirection'
+import useMobileMenu from '@/hooks/useMobileMenu'
 
 export default function Header() {
-  const [isShowHeader, setIsShowHeader] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
-  const [isShowMobileMenu, setIsShowMobileMenu] = useState(false)
-  useLockBodyScroll(isShowMobileMenu)
-
-  const handleMobileHamburgerClick = () => {
-    setIsShowMobileMenu(true)
-  }
-
-  const handleMobileCloseMenuClick = () => {
-    setIsShowMobileMenu(false)
-  }
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (typeof window !== 'undefined') {
-        const currentScrollY = window.scrollY
-        if (currentScrollY > lastScrollY) {
-          setIsShowHeader(false)
-        } else {
-          setIsShowHeader(true)
-        }
-        setLastScrollY(currentScrollY)
-      }
-    }
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll)
-      return () => {
-        window.removeEventListener('scroll', handleScroll)
-      }
-    }
-  }, [lastScrollY])
+  const isShowHeader = useScrollDirection()
+  const { isShowMobileMenu, showMobileMenu, hideMobileMenu } = useMobileMenu()
 
   return (
     <>
@@ -88,7 +53,7 @@ export default function Header() {
         {/* 햄버거 버튼 */}
         <button
           className="block ml-auto tablet:hidden py-[1rem] pl-[1rem] "
-          onClick={handleMobileHamburgerClick}>
+          onClick={showMobileMenu}>
           <Image
             src={'/icon/button/hamburger-white.svg'}
             width={20}
@@ -104,7 +69,7 @@ export default function Header() {
         }`}
         style={{ zIndex: MOBILE_MENU_LIST }}>
         <button
-          onClick={handleMobileCloseMenuClick}
+          onClick={hideMobileMenu}
           className="absolute top-[2rem] right-[1.5rem] p-[1rem]">
           <Image
             src={'/icon/button/closeX-white.svg'}
@@ -117,41 +82,31 @@ export default function Header() {
           <ul className="font-pp text-[3.2rem] font-[300]">
             <Link
               href="/about"
-              onClick={() => {
-                setIsShowMobileMenu(false)
-              }}
+              onClick={hideMobileMenu}
               className="px-[3rem] py-[1.1rem] block border-b border-white">
               About
             </Link>
             <Link
               href="/people"
-              onClick={() => {
-                setIsShowMobileMenu(false)
-              }}
+              onClick={hideMobileMenu}
               className="px-[3rem] py-[1.1rem] block border-b border-white">
               People
             </Link>
             <Link
-              href="/project "
-              onClick={() => {
-                setIsShowMobileMenu(false)
-              }}
+              href="/project"
+              onClick={hideMobileMenu}
               className="px-[3rem] py-[1.1rem] block border-b border-white">
               Project
             </Link>
             <Link
               href="/recruit"
-              onClick={() => {
-                setIsShowMobileMenu(false)
-              }}
+              onClick={hideMobileMenu}
               className="px-[3rem] py-[1.1rem] block border-b border-white">
               Recruit
             </Link>
             <Link
               href="/contact"
-              onClick={() => {
-                setIsShowMobileMenu(false)
-              }}
+              onClick={hideMobileMenu}
               className="px-[3rem] py-[1.1rem] block border-b border-white">
               Contact
             </Link>
