@@ -15,16 +15,18 @@ export default function Header() {
   const pathname = usePathname()
   const isShowHeader = useScrollDirection()
   const { isShowMobileMenu, showMobileMenu, hideMobileMenu } = useMobileMenu()
-  const { isLoading, loadingProgress, startLoading } =
+  const { isLoading, loadingProgress, startLoading, setLoadingSpeed } =
     useLoadingProgress(pathname)
 
   const handleMobileLinkClick = () => {
     hideMobileMenu()
     startLoading()
+    setLoadingSpeed(5)
   }
 
   const handleLinkClick = () => {
     startLoading()
+    setLoadingSpeed(5)
   }
 
   const getLinkClass = (path: string) => {
