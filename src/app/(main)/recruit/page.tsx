@@ -1,6 +1,6 @@
 'use client'
 
-import React, { MutableRefObject, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Recruit1 from './container/Recruit1'
 import Recruit2 from './container/Recruit2'
 import PcOnly from './container/PcOnly'
@@ -19,11 +19,10 @@ export default function RecruitPage() {
     const firstEntry = entries[0]
     if (firstEntry.isIntersecting) {
       backgroundRef.current?.style.setProperty('background', 'white')
-      recruit1ImgRef.current?.style.setProperty('opacity', '0');
-      
+      recruit1ImgRef.current?.style.setProperty('opacity', '0')
     } else {
-      backgroundRef.current?.style.setProperty('background', 'black');
-      recruit1ImgRef.current?.style.setProperty('opacity', '1');
+      backgroundRef.current?.style.setProperty('background', 'black')
+      recruit1ImgRef.current?.style.setProperty('opacity', '1')
     }
   }
 
@@ -50,7 +49,10 @@ export default function RecruitPage() {
         <div
           ref={backgroundRef}
           className="transition-all duration-500 ease-in-out bg-black">
-          <Recruit1 setPcOnly={setPcOnly} recruit1ImgRef={recruit1ImgRef}/>
+          <Recruit1
+            setPcOnly={setPcOnly}
+            recruit1ImgRef={recruit1ImgRef}
+          />
           <Recruit2 detectRef={detectRef} />
         </div>
       )}

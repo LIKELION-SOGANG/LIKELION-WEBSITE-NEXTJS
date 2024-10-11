@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import '@/style/globals.css'
 import { Figtree, Pp, Pretendard } from '@/utils/Font'
-import Header from '../component/Header'
 import ApplyHeader from './apply/components/ApplyHeader'
 //
 //
