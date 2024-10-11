@@ -23,8 +23,8 @@ export default function RootLayout({
       className={`${Figtree.variable} ${Pp.variable} ${Pretendard.variable} `}>
       <body
         className={`${Figtree.className} ${Pp.className} ${Pretendard.className}`}>
-        <section className="pt-[2rem] bg-white text-black">
-          <div className="flex flex-col justify-center items-center ">
+        <section className="pt-[2rem] bg-white text-black h-screen">
+          <div className="flex flex-col justify-center items-center bg-white">
             <div className="w-[56.2rem] ">
               <ApplyHeader />
               {children}

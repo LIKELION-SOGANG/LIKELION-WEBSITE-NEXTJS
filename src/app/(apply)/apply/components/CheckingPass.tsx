@@ -25,4 +25,3 @@ const CheckingPass = () => {
   )
 }
 
-export default CheckingPass

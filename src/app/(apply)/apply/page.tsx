@@ -7,11 +7,10 @@ import SaveComplete from './container/SaveComplete'
 //
 
 export default function ApplyPage() {
+
   return (
     <main>
       <ApplySection />
-      <SaveComplete />
-      <EditPersonalInfo />
     </main>
   )
 }
