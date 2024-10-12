@@ -119,7 +119,7 @@ export default function Header() {
           />
         </button>
         <nav>
-          <ul className="font-pp text-[3.2rem] font-[300]">
+          <ul className="font-pp text-[3.2rem] font-[300] text-white">
             <Link
               href="/about"
               onClick={handleMobileLinkClick}
