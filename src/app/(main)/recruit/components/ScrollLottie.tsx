@@ -19,11 +19,13 @@ const ScrollLottie = () => {
         className="max-tablet:hidden"
         animationData={ScrollAnimationInDesktop}
         loop={true}
+        play={true}
       />
       <Lottie
         className="tablet:hidden"
         animationData={ScrollAnimationInMobile}
         loop={true}
+        play={true}
       />
     </div>
   )
