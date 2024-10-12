@@ -78,6 +78,7 @@ export default function Header() {
           </Link>
           <Link
             href={'/recruit'}
+            onClick={handleLinkClick}
             className={getLinkClass('/recruit')}>
             Recruit
           </Link>
