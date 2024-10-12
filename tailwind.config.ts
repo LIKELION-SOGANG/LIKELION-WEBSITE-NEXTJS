@@ -1,4 +1,3 @@
-import { HEADER, MOBILE_MENU_LIST } from '@/style/zIndex'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -72,6 +71,7 @@ const config: Config = {
       }
     }
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require('tailwind-scrollbar-hide')]
 }
 
