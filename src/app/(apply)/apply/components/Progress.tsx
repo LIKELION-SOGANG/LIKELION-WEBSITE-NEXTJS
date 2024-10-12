@@ -32,7 +32,8 @@ const Progress = ({ step }: { step: number }) => {
             ''
           ) : (
             <div className="flex justify-center items-center ">
-              <div className={`m-[0_1.4rem] w-[12.2rem] h-[1px] ${progress[index + 1] ? 'bg-black ' : 'bg-[#d9d9d9]'}`}></div>
+              <div
+                className={`m-[0_1.4rem] w-[12.2rem] h-[1px] ${progress[index + 1] ? 'bg-black ' : 'bg-[#d9d9d9]'}`}></div>
             </div>
           )}
         </div>

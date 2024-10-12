@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Recruit1 from './container/Recruit1'
 import Recruit2 from './container/Recruit2'
-import PcOnly from './container/PcOnly'
+import PCOnly from './components/PCOnly'
 //
 //
 //
@@ -43,7 +43,7 @@ export default function RecruitPage() {
     <>
       {pcOnly ? (
         <div>
-          <PcOnly setPcOnly={setPcOnly} />
+          <PCOnly setPcOnly={setPcOnly} />
         </div>
       ) : (
         <div

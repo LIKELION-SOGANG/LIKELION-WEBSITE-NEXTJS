@@ -5,19 +5,18 @@ import {
   personalInformation,
   personalPhoneNumber
 } from '@/utils/recruitMockData'
-import Progress from '../components/Progress'
-import PersonalStatementForm from './PersonalStatementForm'
+
+//
+//
+//
 
 interface PersonalStatementFormProps {
   onClickStep: () => void
 }
 
-
-
 const PersonalInformationForm = ({
   onClickStep
 }: PersonalStatementFormProps) => {
-
   const onChangeInput = () => {
     console.log('not yet')
   }
@@ -28,7 +27,7 @@ const PersonalInformationForm = ({
         {personalInformation.map((item, index) => (
           <SmallInput
             onChangeInput={onChangeInput}
-            value=''
+            value=""
             name=""
             key={index}
             title={item.title}
@@ -38,7 +37,7 @@ const PersonalInformationForm = ({
 
         <SmallInput
           onChangeInput={onChangeInput}
-          value=''
+          value=""
           name=""
           title={personalPhoneNumber.title}
           placeholder={personalPhoneNumber.placeholder}

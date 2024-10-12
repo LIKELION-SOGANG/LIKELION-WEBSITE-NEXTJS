@@ -1,9 +1,8 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Button from '../components/Button'
 import SmallInput from '../components/SmallInput'
-import ApplyHeader from '../components/ApplyHeader'
 import PersonalInformationForm from './PersonalInformationForm'
 import PersonalStatementForm from './PersonalStatementForm'
 import Progress from '../components/Progress'
@@ -14,7 +13,7 @@ const ApplySection = () => {
 
   const onClickStep = () => {
     setStep(prev => prev + 1)
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
   }
 
   const onChangeInput = () => {
@@ -50,8 +49,8 @@ const ApplySection = () => {
               <div>
                 <SmallInput
                   onChangeInput={onChangeInput}
-                  value=''
-                  name='uniqueNumber'
+                  value=""
+                  name="uniqueNumber"
                   title="이미 작성하던 지원서가 있으시다면,"
                   placeholder="이메일로 발송된 고유번호를 입력해주세요."
                 />

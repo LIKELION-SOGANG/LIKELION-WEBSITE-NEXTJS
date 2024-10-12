@@ -4,11 +4,18 @@ import SelectPart from '../components/SelectPart'
 import Button from '../components/Button'
 
 const EditPersonalInfo = () => {
+  const onChangeInput = () => {
+    console.log('not yet')
+  }
+
   return (
     <div className="w-[56.2rem] relative">
       <div className="flex flex-col gap-[5rem] mb-[5rem]">
         {personalInformation.map((item, index) => (
           <SmallInput
+            onChangeInput={onChangeInput}
+            value=""
+            name="gitURL"
             key={index}
             title={item.title}
             placeholder={item.placeholder}
