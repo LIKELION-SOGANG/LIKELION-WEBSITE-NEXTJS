@@ -1,16 +1,13 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import Recruit1 from './container/Recruit1'
 import Recruit2 from './container/Recruit2'
-import PCOnly from '../../(apply)/apply/container/PCOnly'
 //
 //
 //
 
 export default function RecruitPage() {
-  const [pcOnly, setPcOnly] = useState(false)
-
   const detectRef = useRef<HTMLDivElement | null>(null)
   const backgroundRef = useRef<HTMLDivElement | null>(null)
   const recruit1ImgRef = useRef<HTMLDivElement | null>(null)
@@ -41,16 +38,12 @@ export default function RecruitPage() {
   }, [])
   return (
     <>
-        <div
-          ref={backgroundRef}
-          className="transition-all duration-500 ease-in-out bg-black">
-          <Recruit1
-            
-            recruit1ImgRef={recruit1ImgRef}
-          />
-          <Recruit2 detectRef={detectRef} />
-        </div>
-      
+      <div
+        ref={backgroundRef}
+        className="transition-all duration-500 ease-in-out bg-black">
+        <Recruit1 recruit1ImgRef={recruit1ImgRef} />
+        <Recruit2 detectRef={detectRef} />
+      </div>
     </>
   )
 }

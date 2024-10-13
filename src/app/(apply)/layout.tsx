@@ -26,7 +26,7 @@ export default function RootLayout({
         <section className=" bg-white text-black h-screen w-screen desktop:pt-[2rem]">
           <div className="desktop:flex flex-col justify-center items-center bg-white">
             <div className="w-[56.2rem] ">
-              <div className='max-desktop:hidden'>
+              <div className="max-desktop:hidden">
                 <ApplyHeader />
               </div>
               {children}

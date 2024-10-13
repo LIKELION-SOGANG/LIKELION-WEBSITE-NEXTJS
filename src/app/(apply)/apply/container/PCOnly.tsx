@@ -5,12 +5,11 @@ import CloseXWhite from '../../../../../public/icon/button/closeX-white.svg'
 import { PCONLY_MODAL } from '@/style/zIndex'
 import { useRouter } from 'next/navigation'
 
-
 const PCOnly = () => {
-  const router = useRouter();
+  const router = useRouter()
 
   const onClickCloseXWhite = () => {
-    router.push("/recruit")
+    router.push('/recruit')
   }
 
   return (
@@ -22,9 +21,7 @@ const PCOnly = () => {
           Like<span className="italic ">lion</span> So
           <span className="italic">gang</span>
         </div>
-        <button
-          onClick={onClickCloseXWhite
-          }>
+        <button onClick={onClickCloseXWhite}>
           <CloseXWhite />
         </button>
       </div>

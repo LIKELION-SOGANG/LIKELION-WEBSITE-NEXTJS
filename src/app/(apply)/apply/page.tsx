@@ -8,8 +8,12 @@ import PCOnly from './container/PCOnly'
 export default function ApplyPage() {
   return (
     <main>
-        <div className='desktop:hidden'><PCOnly/></div>
-        <div className='max-desktop:hidden'><ApplySection /></div>
+      <div className="desktop:hidden">
+        <PCOnly />
+      </div>
+      <div className="max-desktop:hidden">
+        <ApplySection />
+      </div>
     </main>
   )
 }
