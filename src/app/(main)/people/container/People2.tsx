@@ -24,7 +24,7 @@ export default function SecondSection({ Members }: SecondSectionProps) {
   useEffect(() => {
     const generations = Array.from(
       new Set(Members.map((member: Member) => parseInt(member.generation, 10)))
-    ) as number[]
+    ).sort((a, b) => a - b)
     setTabList(generations)
     setSelectedTab(parseInt(Members[Members.length - 1].generation))
   }, [Members])
