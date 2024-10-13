@@ -1,12 +1,17 @@
+'use client'
+
 import React from 'react'
 import CloseXWhite from '../../../../../public/icon/button/closeX-white.svg'
 import { PCONLY_MODAL } from '@/style/zIndex'
+import { useRouter } from 'next/navigation'
 
-interface PcOnlyProps {
-  setPcOnly: React.Dispatch<React.SetStateAction<boolean>>
-}
+const PCOnly = () => {
+  const router = useRouter()
 
-const PCOnly = ({ setPcOnly }: PcOnlyProps) => {
+  const onClickCloseXWhite = () => {
+    router.push('/recruit')
+  }
+
   return (
     <main
       className="w-screen h-screen bg-black fixed py-[5rem] px-[3rem] flex flex-col justify-between text-white"
@@ -16,12 +21,7 @@ const PCOnly = ({ setPcOnly }: PcOnlyProps) => {
           Like<span className="italic ">lion</span> So
           <span className="italic">gang</span>
         </div>
-        <button
-          onClick={() =>
-            setPcOnly(prev => {
-              return !prev
-            })
-          }>
+        <button onClick={onClickCloseXWhite}>
           <CloseXWhite />
         </button>
       </div>

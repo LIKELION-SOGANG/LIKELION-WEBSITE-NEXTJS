@@ -3,19 +3,17 @@
 import React from 'react'
 import ScrollLottie from '../components/ScrollLottie'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 interface Recruit1Props {
-  setPcOnly: React.Dispatch<React.SetStateAction<boolean>>
   recruit1ImgRef: React.MutableRefObject<HTMLDivElement | null>
 }
 
-const Recruit1 = ({ setPcOnly, recruit1ImgRef }: Recruit1Props) => {
-  //const router = useRouter()
+const Recruit1 = ({ recruit1ImgRef }: Recruit1Props) => {
+  const router = useRouter()
 
   const onClickApply = () => {
-    alert('현재 지원 기간이 아닙니다.')
-    return
-    // router.push('/apply')
+    router.push('/apply')
   }
 
   return (
@@ -49,11 +47,7 @@ const Recruit1 = ({ setPcOnly, recruit1ImgRef }: Recruit1Props) => {
         </button>
 
         <div
-          onClick={() =>
-            setPcOnly(prev => {
-              return !prev
-            })
-          }
+          onClick={onClickApply}
           className="cursor-pointer tablet:hidden absolute w-[10rem] h-[10rem] top-[45.4rem] right-[2.5rem] rounded-full bg-white flex items-center justify-center">
           <span className="text-black text-[1.6rem] text-center whitespace-pre-line">{`APLLY\nNOW`}</span>
         </div>
