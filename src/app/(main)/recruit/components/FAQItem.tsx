@@ -26,7 +26,6 @@ const FAQItem = ({ items }: Items) => {
                 <button
                   onClick={() =>
                     setOpen(prev => {
-                      console.log(prev)
                       const temp = [...prev]
                       temp[index] = !temp[index]
                       return temp
