@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang="kr"
-      className={`${Figtree.variable} ${Pp.variable} ${Pretendard.variable}`}>
+      className={`${Figtree.variable} ${Pp.variable} ${Pretendard.variable} overflow-x-hidden`}>
       <body
         className={`${Figtree.className} ${Pp.className} ${Pretendard.className}`}>
         <section className=" bg-white text-black h-screen w-screen desktop:pt-[2rem]">
