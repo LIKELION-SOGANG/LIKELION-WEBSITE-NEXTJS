@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Recruit1 from './container/Recruit1'
 import Recruit2 from './container/Recruit2'
-import PCOnly from './components/PCOnly'
+import PCOnly from '../../(apply)/apply/container/PCOnly'
 //
 //
 //
@@ -41,21 +41,16 @@ export default function RecruitPage() {
   }, [])
   return (
     <>
-      {pcOnly ? (
-        <div>
-          <PCOnly setPcOnly={setPcOnly} />
-        </div>
-      ) : (
         <div
           ref={backgroundRef}
           className="transition-all duration-500 ease-in-out bg-black">
           <Recruit1
-            setPcOnly={setPcOnly}
+            
             recruit1ImgRef={recruit1ImgRef}
           />
           <Recruit2 detectRef={detectRef} />
         </div>
-      )}
+      
     </>
   )
 }

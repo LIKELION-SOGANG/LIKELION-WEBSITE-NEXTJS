@@ -1,4 +1,5 @@
 import ApplySection from './container/ApplySection'
+import PCOnly from './container/PCOnly'
 
 //
 //
@@ -7,7 +8,8 @@ import ApplySection from './container/ApplySection'
 export default function ApplyPage() {
   return (
     <main>
-      <ApplySection />
+        <div className='desktop:hidden'><PCOnly/></div>
+        <div className='max-desktop:hidden'><ApplySection /></div>
     </main>
   )
 }

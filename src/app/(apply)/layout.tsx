@@ -20,13 +20,15 @@ export default function RootLayout({
   return (
     <html
       lang="kr"
-      className={`${Figtree.variable} ${Pp.variable} ${Pretendard.variable} `}>
+      className={`${Figtree.variable} ${Pp.variable} ${Pretendard.variable}`}>
       <body
         className={`${Figtree.className} ${Pp.className} ${Pretendard.className}`}>
-        <section className="pt-[2rem] bg-white text-black h-screen">
-          <div className="flex flex-col justify-center items-center bg-white">
+        <section className=" bg-white text-black h-screen w-screen desktop:pt-[2rem]">
+          <div className="desktop:flex flex-col justify-center items-center bg-white">
             <div className="w-[56.2rem] ">
-              <ApplyHeader />
+              <div className='max-desktop:hidden'>
+                <ApplyHeader />
+              </div>
               {children}
             </div>
           </div>
