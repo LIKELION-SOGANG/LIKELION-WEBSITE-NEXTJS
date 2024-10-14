@@ -10,7 +10,7 @@ const Recruit2 = ({
   detectRef
 }: {
   detectRef: React.MutableRefObject<HTMLDivElement | null>
-}) => {
+}) => { 
   return (
     <div
       ref={detectRef}

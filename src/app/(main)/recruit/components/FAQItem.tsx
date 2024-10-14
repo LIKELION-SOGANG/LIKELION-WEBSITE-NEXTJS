@@ -36,7 +36,7 @@ const FAQItem = ({ items }: Items) => {
                 </button>
               </div>
               <div
-                className={`${open[index] ? 'max-h-[10rem] mt-[1.4rem]' : 'max-h-0 mt-0'} overflow-hidden transition-all ease-in-out font-medium text-[1.6rem] whitespace-pre-line`}>
+                className={`${open[index] ? 'mt-[1.4rem]' : 'max-h-0 mt-0'} overflow-hidden transition-all ease-in-out font-medium text-[1.6rem] whitespace-pre-line`}>
                 {item.A}
               </div>
             </div>
