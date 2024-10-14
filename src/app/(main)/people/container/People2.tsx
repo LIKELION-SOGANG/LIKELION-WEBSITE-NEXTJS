@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import TabItem from '../components/TabItem'
 import { Member } from '@/models/member-schema'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 interface Member {
   _id: string
@@ -21,13 +22,25 @@ export default function SecondSection({ Members }: SecondSectionProps) {
   const [rightTab, setRightTab] = useState<number[]>([])
   const [lions, setLions] = useState<Member[]>([])
 
+  const router = useRouter()
+  const searchParams = useSearchParams()
+
   useEffect(() => {
+    const tabFromQuery = searchParams.get('tab')
+    const defaultTab = parseInt(Members[Members.length - 1].generation, 10)
+
     const generations = Array.from(
       new Set(Members.map((member: Member) => parseInt(member.generation, 10)))
     ).sort((a, b) => a - b)
+
     setTabList(generations)
-    setSelectedTab(parseInt(Members[Members.length - 1].generation))
-  }, [Members])
+
+    if (tabFromQuery && !isNaN(parseInt(tabFromQuery))) {
+      setSelectedTab(parseInt(tabFromQuery))
+    } else {
+      setSelectedTab(defaultTab)
+    }
+  }, [Members, searchParams])
 
   useEffect(() => {
     if (selectedTab) {
@@ -39,10 +52,11 @@ export default function SecondSection({ Members }: SecondSectionProps) {
         )
       )
     }
-  }, [selectedTab, tabList])
+  }, [selectedTab, tabList, Members])
 
   const handleTabClick = (gen: number) => {
     setSelectedTab(gen)
+    router.push(`?tab=${gen}`, { scroll: false })
   }
 
   return (
