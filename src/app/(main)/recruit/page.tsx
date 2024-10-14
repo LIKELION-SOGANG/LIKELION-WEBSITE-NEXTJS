@@ -1,9 +1,12 @@
 'use client'
+
 import { useRef } from 'react'
 import Recruit1 from './container/Recruit1'
 import Recruit2 from './container/Recruit2'
 import useIntersectionObserver from '@/hooks/useIntersectionObserver'
-
+//
+//
+//
 export default function RecruitPage() {
   const detectRef = useRef<HTMLDivElement | null>(null)
   const backgroundRef = useRef<HTMLDivElement | null>(null)
