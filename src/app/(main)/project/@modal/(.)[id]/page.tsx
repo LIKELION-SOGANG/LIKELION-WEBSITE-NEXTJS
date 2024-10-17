@@ -1,3 +1,5 @@
+import ModalPortal from '@/app/component/ModalPortal'
+
 export default function ModalPage({}) {
-  return <div>intercept</div>
+  return <ModalPortal>intercept</ModalPortal>
 }
