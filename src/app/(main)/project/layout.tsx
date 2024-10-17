@@ -17,9 +17,11 @@ export const metadata: Metadata = {
 //
 //
 export default async function ProjetcLayout({
-  children
+  children,
+  modal
 }: {
   children: React.ReactNode
+  modal: React.ReactNode
 }) {
   const projectList = await getAllProjects()
   if (!projectList) return null
@@ -41,6 +43,7 @@ export default async function ProjetcLayout({
         />
       </main>
       {children}
+      {modal}
     </>
   )
 }

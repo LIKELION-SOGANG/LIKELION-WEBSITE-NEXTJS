@@ -26,6 +26,7 @@ export default function RootLayout({
       className={`${Figtree.variable} ${Pp.variable} ${Pretendard.variable}`}>
       <body
         className={`${Figtree.className} ${Pp.className} ${Pretendard.className}`}>
+        <div id="modal"></div>
         <Header />
         {children}
         <Footer />
